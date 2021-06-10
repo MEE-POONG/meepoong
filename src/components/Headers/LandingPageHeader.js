@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 import { Container } from "reactstrap";
-
+import { BrowserView, MobileView } from "react-device-detect";
 function LandingPageHeader() {
   let pageHeader = React.createRef();
 
@@ -43,7 +43,12 @@ function LandingPageHeader() {
   function headerContentTitle() {
     return (
       <div className="motto text-center">
-        <h1>Coder | Designer | Thinker | Blogger</h1>
+        <BrowserView>
+          <h1>Coder | Designer | Thinker | Blogger</h1>
+        </BrowserView>
+        <MobileView>
+          <h4>Coder | Designer | Thinker | Blogger</h4>
+        </MobileView>
       </div>
     );
   }

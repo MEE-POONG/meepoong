@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import classnames from "classnames";
 import {
@@ -12,15 +12,15 @@ import {
 } from "reactstrap";
 
 function ExamplesNavbar() {
-  const [navbarColor, setNavbarColor] = React.useState("navbar-transparent");
-  const [navbarCollapse, setNavbarCollapse] = React.useState(false);
+  const [navbarColor, setNavbarColor] = useState("navbar-transparent");
+  const [navbarCollapse, setNavbarCollapse] = useState(false);
 
   const toggleNavbarCollapse = () => {
     setNavbarCollapse(!navbarCollapse);
     document.documentElement.classList.toggle("nav-open");
   };
 
-  React.useEffect(() => {
+  useEffect(() => {
     const updateNavbarColor = () => {
       if (
         document.documentElement.scrollTop > 299 ||
@@ -62,7 +62,7 @@ function ExamplesNavbar() {
       title="MEE POONG CO., LTD."
       tag={Link}
     >
-      Mee Poong
+      MEE POONG CO., LTD.
     </NavbarBrand>
   );
   return (
@@ -82,18 +82,6 @@ function ExamplesNavbar() {
           isOpen={navbarCollapse}
         >
           <Nav navbar>
-            <NavItem>
-              <NavLink to="/index" tag={Link}>
-                <i className="nc-icon nc-layout-11" /> About
-              </NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink
-                href="contact"
-              >
-                <i className="nc-icon nc-book-bookmark" /> Contact
-              </NavLink>
-            </NavItem>
             <NavItem>
               <NavLink
                 data-placement="bottom"
