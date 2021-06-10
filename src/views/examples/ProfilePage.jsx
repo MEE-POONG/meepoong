@@ -1,21 +1,4 @@
-/*!
 
-=========================================================
-* Paper Kit React - v1.3.0
-=========================================================
-
-* Product Page: https://www.meepoong.com/product/meepoong
-
-* Copyright 2021 MEE POONG (https://www.meepoong.com)
-* Licensed under MIT (https://github.com/creativetimofficial/meepoong/blob/main/LICENSE.md)
-
-* Coded by MEE POONG
-
-=========================================================
-
-* The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
-
-*/
 import React from "react";
 
 // reactstrap components
@@ -35,9 +18,9 @@ import {
 } from "reactstrap";
 
 // core components
-import ExamplesNavbar from "components/Navbars/ExamplesNavbar.js";
-import ProfilePageHeader from "components/Headers/ProfilePageHeader.js";
-import DemoFooter from "components/Footers/DemoFooter.js";
+import ExamplesNavbar from "components/Navbars/ExamplesNavbar";
+import ProfilePageHeader from "components/Headers/ProfilePageHeader";
+import DemoFooter from "components/Footers/DemoFooter";
 
 function ProfilePage() {
   const [activeTab, setActiveTab] = React.useState("1");

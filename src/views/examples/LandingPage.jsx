@@ -14,7 +14,7 @@ import {
   Row,
   Col,
 } from "reactstrap";
-import DemoFooter from "components/Footers/DemoFooter.js";
+import DemoFooter from "components/Footers/DemoFooter";
 
 function LandingPage() {
   const [infoList] = useState([
@@ -62,9 +62,7 @@ function LandingPage() {
             {product()}
             <br />
             <br />
-            <Row>
-              {mapInfoList()}
-            </Row>
+            <Row>{mapInfoList()}</Row>
           </Container>
         </div>
         <div className="section section-dark text-center">
