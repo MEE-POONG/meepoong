@@ -1,2 +1,6 @@
+gitignore
+.dockerignore
+Dockerfile
+build
 node_modules
-npm-debug.log
+README.md
