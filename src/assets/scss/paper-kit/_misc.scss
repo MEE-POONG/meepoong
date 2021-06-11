@@ -201,7 +201,7 @@ input[type="file"] > input[type="button"]::-moz-focus-inner {
       z-index: 3;
     }
     &:after {
-      background-color: rgba(0, 0, 0, 0.5);
+      background-color: rgba(0, 0, 0, 0.0);
       content: "";
       display: block;
       height: 100%;

@@ -21,7 +21,7 @@ function LandingPageHeader() {
   return (
     <div
       style={{
-        backgroundImage: "url(" + require("assets/img/c1.png").default + ")",
+        backgroundImage: "url(" + require("assets/img/26198.jpg").default + ")",
       }}
       className="page-header"
       data-parallax={true}
@@ -56,7 +56,7 @@ function LandingPageHeader() {
 
     function desktopContent() {
       return <BrowserView>
-        <h1>Coder | Designer | Thinker | Blogger</h1>
+        <h3>Coder | Designer | Thinker | Blogger</h3>
       </BrowserView>;
     }
   }

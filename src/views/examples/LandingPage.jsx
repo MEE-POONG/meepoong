@@ -13,15 +13,30 @@ import DemoFooter from "components/Footers/DemoFooter";
 import CodeIcon from "@material-ui/icons/Code";
 import ChatBubbleIcon from "@material-ui/icons/ChatBubble";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
-
+import PeopleAltRoundedIcon from "@material-ui/icons/PeopleAltRounded";
+import LocalAirportIcon from "@material-ui/icons/LocalAirport";
 function LandingPage() {
   const [product] = useState([
     {
+      icon: (
+        <PeopleAltRoundedIcon
+          style={{
+            fontSize: "88px",
+          }}
+        />
+      ),
       title: "WHO ARE WE?",
       description:
         "เรามีบริการทางด้านเทคโนโลยีที่ทันสมัยสำหรับองค์กร และผู้ใช้งานจริงเพื่อส่งเสริมระบบการทำงานปัจจุบันของคุณและก่อให้เกิดการพัฒนาและเปลี่ยนแปลงอย่างต่อเนื่องเพิ่มขีดความสามารถขององค์กรคุณให้พร้อมรับมือได้ทุกสถานการณ์เพราะเราเชื่อว่าการพัฒนากระบวนการทำงานด้วยเทคโนโลยีและนวัตกรรมเป็นสิ่งที่จำเป็นและสำคัญมากในอนาคต",
     },
     {
+      icon: (
+        <LocalAirportIcon
+          style={{
+            fontSize: "88px",
+          }}
+        />
+      ),
       title: "OUR MISSION?",
       description:
         "เราตั้งใจที่จะสร้างความเปลี่ยนแปลงทางด้านดิจิทัลและเทคโนโลยีให้กับทุกองค์กร และเชื่อเป็นอย่างยิ่งว่าเราสามารถช่วยทุกองค์กร ในการเตรียมพร้อมต่อโลกที่เปลี่ยนแปลงได้อย่างเต็มรูปแบบ นอกจากนี้เรามุ่งหวังการส่งมอบแง่มุมทางธุรกิจ (Business) ผสมผสานกับการประยุกต์ใช้เทคโนโลยีในองค์กร (Technological Insight) เข้าด้วยกัน เพื่อต่อยอดและพัฒนาทุกองค์กรให้เป็น Data Driven Organization ได้อย่างมีประสิทธิภาพ",
@@ -70,7 +85,7 @@ function LandingPage() {
         <Container>
           {headerAboutUs()}
           <Row>
-            <Col md="4">
+            <Col md={{ size: 4, offset: 4, order: 4 }}>
               <Card className="card-profile card-plain">
                 <div className="card-avatar">
                   <a href="#pablo" onClick={(e) => e.preventDefault()}>
@@ -104,6 +119,8 @@ function LandingPage() {
                 </CardFooter>
               </Card>
             </Col>
+          </Row>
+          <Row>
             <Col md="4">
               <Card className="card-profile card-plain">
                 <div className="card-avatar">
@@ -178,6 +195,41 @@ function LandingPage() {
                 </CardFooter>
               </Card>
             </Col>
+            <Col md="4">
+              <Card className="card-profile card-plain">
+                <div className="card-avatar">
+                  <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                    <img
+                      alt="..."
+                      src={require("assets/img/faces/yaranan.jpg").default}
+                    />
+                  </a>
+                </div>
+                <CardBody>
+                  <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                    <div className="author">
+                      <CardTitle tag="h4">Yuranan Prachuapsuk</CardTitle>
+                      <h6 className="card-category">Quality Assurance</h6>
+                    </div>
+                  </a>
+                  <p className="card-description text-center">
+                    If you want to go fast, go alone, if you want to go far, go
+                    as a team. There is no right or wrong decision in this
+                    world. Every decision can always lead us to new learning.
+                  </p>
+                </CardBody>
+                <CardFooter className="text-center">
+                  <Button
+                    className="btn-just-icon btn-neutral ml-1"
+                    color="link"
+                    href="https://www.facebook.com/ItmeTaTa/"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    <i className="fa fa-facebook" />
+                  </Button>
+                </CardFooter>
+              </Card>
+            </Col>
           </Row>
         </Container>
       </div>
@@ -186,10 +238,10 @@ function LandingPage() {
   );
 
   function mapProduct() {
-    return product.map(({ title, description }, index) => {
+    return product.map(({ title, description, icon }, index) => {
       return (
         <div className={`section${index ? "-dark" : ""} m-py-10 text-center`}>
-          <Container>{productContet(title, description)}</Container>
+          <Container>{productContet(title, description, icon)}</Container>
         </div>
       );
     });
@@ -248,9 +300,10 @@ function LandingPage() {
     return <h4 className="info-title">{title}</h4>;
   }
 
-  function productContet(title, description) {
+  function productContet(title, description, icon) {
     return (
       <div className="container">
+        {infoIcon(icon)}
         {productTitle(title)}
         {productDescription(description)}
       </div>
