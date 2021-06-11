@@ -5949,10 +5949,10 @@ gud@^1.0.0:
   resolved "https://registry.yarnpkg.com/gud/-/gud-1.0.0.tgz#a489581b17e6a70beca9abe3ae57de7a499852c0"
   integrity sha512-zGEOVKFM5sVPPrYs7J5/hYEw2Pof8KCyOwyhG8sAF26mCAeUFAcYPu1mwB7hhpIP29zOIBaDqwuHdLp0jvZXjw==
 
-gulp-append-prepend@^1.0.9:
-  version "1.0.9"
-  resolved "https://registry.yarnpkg.com/gulp-append-prepend/-/gulp-append-prepend-1.0.9.tgz#e2732a36b2019356718966013e681c8ba57d3675"
-  integrity sha512-IUHAd9NHNpQWj0dA8GTEkgUlrgEhTZVe5T6AuEAAMlMSIMdxDZlCQj7zSKDL69nMJpsvgtgosAG4+n6zlhv27Q==
+gulp-append-prepend@1.0.8:
+  version "1.0.8"
+  resolved "https://registry.yarnpkg.com/gulp-append-prepend/-/gulp-append-prepend-1.0.8.tgz#f44efc6b667d784d4b7d932931ff6d072a7d24cd"
+  integrity sha512-dmlju9nEC4PRBdfwaGsTrDQCx/7hVyPfbBNJ8rNSIrY7O4fdiPb2ei7N0mxXcxrsxA/BftTGMEdRZrSH8g9cfg==
   dependencies:
     plugin-error "^1.0.1"
     read-file "^0.2.0"
@@ -5982,7 +5982,7 @@ gulp-cli@^2.2.0:
     v8flags "^3.2.0"
     yargs "^7.1.0"
 
-gulp@^4.0.2:
+gulp@4.0.2:
   version "4.0.2"
   resolved "https://registry.yarnpkg.com/gulp/-/gulp-4.0.2.tgz#543651070fd0f6ab0a0650c6a3e6ff5a7cb09caa"
   integrity sha512-dvEs27SCZt2ibF29xYgmnwwCYZxdxhQ/+LFWlbAW8y7jt68L/65402Lz3+CKy0Ov4rOs+NERmDq7YlZaDqUIfA==

@@ -25,9 +25,7 @@
     "install:clean": "rm -rf node_modules/ && rm -rf package-lock.json && yarn && yarn start",
     "compile-sass": "node-sass src/assets/scss/paper-kit.scss src/assets/css/paper-kit.css",
     "minify-sass": "node-sass src/assets/scss/paper-kit.scss src/assets/css/paper-kit.min.css --output-style compressed",
-    "map-sass": "node-sass src/assets/scss/paper-kit.scss src/assets/css/paper-kit.css --source-map true",
-    "gulp": "gulp",
-    "minify": "gulp minify"
+    "map-sass": "node-sass src/assets/scss/paper-kit.scss src/assets/css/paper-kit.css --source-map true"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -50,8 +48,8 @@
   },
   "devDependencies": {
     "bootstrap": "4.6.0",
-    "gulp": "^4.0.2",
-    "gulp-append-prepend": "^1.0.9"
+    "gulp": "4.0.2",
+    "gulp-append-prepend": "1.0.8"
   },
   "description": "MEE POONG CO., LTD.",
   "main": "src/assets/scss/paper-kit.scss",
