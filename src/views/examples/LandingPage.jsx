@@ -15,6 +15,18 @@ import ChatBubbleIcon from "@material-ui/icons/ChatBubble";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 
 function LandingPage() {
+  const [product] = useState([
+    {
+      title: "WHO ARE WE?",
+      description:
+        "เรามีบริการทางด้านเทคโนโลยีที่ทันสมัยสำหรับองค์กร และผู้ใช้งานจริงเพื่อส่งเสริมระบบการทำงานปัจจุบันของคุณและก่อให้เกิดการพัฒนาและเปลี่ยนแปลงอย่างต่อเนื่องเพิ่มขีดความสามารถขององค์กรคุณให้พร้อมรับมือได้ทุกสถานการณ์เพราะเราเชื่อว่าการพัฒนากระบวนการทำงานด้วยเทคโนโลยีและนวัตกรรมเป็นสิ่งที่จำเป็นและสำคัญมากในอนาคต",
+    },
+    {
+      title: "OUR MISSION?",
+      description:
+        "เราตั้งใจที่จะสร้างความเปลี่ยนแปลงทางด้านดิจิทัลและเทคโนโลยีให้กับทุกองค์กร และเชื่อเป็นอย่างยิ่งว่าเราสามารถช่วยทุกองค์กร ในการเตรียมพร้อมต่อโลกที่เปลี่ยนแปลงได้อย่างเต็มรูปแบบ นอกจากนี้เรามุ่งหวังการส่งมอบแง่มุมทางธุรกิจ (Business) ผสมผสานกับการประยุกต์ใช้เทคโนโลยีในองค์กร (Technological Insight) เข้าด้วยกัน เพื่อต่อยอดและพัฒนาทุกองค์กรให้เป็น Data Driven Organization ได้อย่างมีประสิทธิภาพ",
+    },
+  ]);
   const [infoList] = useState([
     {
       icon: <CodeIcon />,
@@ -47,24 +59,9 @@ function LandingPage() {
   });
   return (
     <>
-      <div className="section mt-1 text-center">
-        <Container>
-          {product()}
-          <br />
-          <br />
-        </Container>
-      </div>
-      <div className="section-dark mt-1  text-center">
-        <Container>
-          {product2()}
-          <br />
-          <br />
-          <br />
-          <br />
-        </Container>
-      </div>
+      {mapProduct()}
       <div className="section  text-center">
-        <Container>
+        <Container className="m-py-6">
           <Row>{mapInfoList()}</Row>
         </Container>
       </div>
@@ -188,6 +185,16 @@ function LandingPage() {
     </>
   );
 
+  function mapProduct() {
+    return product.map(({ title, description }, index) => {
+      return (
+        <div className={`section${index ? "-dark" : ""} m-py-10 text-center`}>
+          <Container>{productContet(title, description)}</Container>
+        </div>
+      );
+    });
+  }
+
   function headerAboutUs() {
     return <h2 className="title">Let's know about us</h2>;
   }
@@ -241,61 +248,20 @@ function LandingPage() {
     return <h4 className="info-title">{title}</h4>;
   }
 
-  function product() {
+  function productContet(title, description) {
     return (
       <div className="container">
-        {productTitle()}
-        {productDescription()}
-        <br />
-        {/* {productButton()} */}
+        {productTitle(title)}
+        {productDescription(description)}
       </div>
     );
   }
-  function product2() {
-    return (
-      <div className="container">
-        {productTitle2()}
-        {productDescription2()}
-        <br />
-      </div>
-    );
-  }
-  function productDescription() {
-    return (
-      <h5 className="description">
-        เรามีบริการทางด้านเทคโนโลยีที่ทันสมัยสำหรับองค์กร และผู้ใช้งานจริง
-        เพื่อส่งเสริมระบบการทำงานปัจจุบันของคุณ
-        และก่อให้เกิดการพัฒนาและเปลี่ยนแปลงอย่างต่อเนื่อง
-        เพิ่มขีดความสามารถขององค์กรคุณให้พร้อมรับมือได้ทุกสถานการณ์
-        <br />
-        เพราะเราเชื่อว่าการพัฒนากระบวนการทำงานด้วยเทคโนโลยีและนวัตกรรมเป็นสิ่งที่จำเป็นและสำคัญมากในอนาคต
-      </h5>
-    );
-  }
 
-  function productTitle() {
-    return <h2 className="title">WHO ARE WE?</h2>;
+  function productTitle(title) {
+    return <h2 className="title">{title}</h2>;
   }
-  function productDescription2() {
-    return (
-      <h5 className="description">
-        เราตั้งใจที่จะสร้างความเปลี่ยนแปลงทางด้านดิจิทัลและเทคโนโลยีให้กับทุกองค์กร
-        และเชื่อเป็นอย่างยิ่งว่าเราสามารถช่วยทุกองค์กร
-        ในการเตรียมพร้อมต่อโลกที่เปลี่ยนแปลงได้อย่างเต็มรูปแบบ
-        นอกจากนี้เรามุ่งหวังการส่งมอบแง่มุมทางธุรกิจ (Business)
-        ผสมผสานกับการประยุกต์ใช้เทคโนโลยีในองค์กร (Technological Insight)
-        เข้าด้วยกัน เพื่อต่อยอดและพัฒนาทุกองค์กรให้เป็น Data Driven Organization
-        ได้อย่างมีประสิทธิภาพ
-      </h5>
-    );
-  }
-
-  function productTitle2() {
-    return (
-      <h2 className="title pt-5">
-        <div className="pt-5">OUR MISSION</div>
-      </h2>
-    );
+  function productDescription(description) {
+    return <h5 className="description">{description}</h5>;
   }
 }
 

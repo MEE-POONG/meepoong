@@ -2,3 +2,11 @@
   font-family: "Niramit", "Montserrat", "FontAwesome", "nucleo-icons",
     sans-serif !important;
 }
+.m-py-6 {
+  padding-bottom: 6rem !important;
+  padding-top: 6rem !important;
+}
+.m-py-10{
+  padding-bottom: 10rem !important;
+  padding-top: 10rem !important;
+}

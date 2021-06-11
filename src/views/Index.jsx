@@ -5,7 +5,6 @@ import React from "react";
 // core components
 import ExamplesNavbar from "../components/Navbars/ExamplesNavbar";
 import LandingPageHeader from "../components/Headers/LandingPageHeader";
-// import Slidecard from "../components/body/Slidecard";
 
 // index sections
 
@@ -23,11 +22,7 @@ function Index() {
     <>
       <ExamplesNavbar />
       <LandingPageHeader />
-      {/* <div className="section section-dark text-center">
-        <div className="container mt-5 ">
-          <Slidecard />
-        </div>
-      </div> */}
+
 
       <div className="main">{<LandingPage />}</div>
     </>
