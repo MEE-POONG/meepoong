@@ -251,9 +251,9 @@ function LandingPage() {
     return <h2 className="title">Let's know about us</h2>;
   }
 
-  function aboutUsImg(img) {
-    return <img alt="..." src={img} />;
-  }
+  // function aboutUsImg(img) {
+  //   return <img alt="..." src={img} />;
+  // }
 
   function infoBlog(icon, title, description, link) {
     return (
