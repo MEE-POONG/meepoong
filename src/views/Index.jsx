@@ -1,12 +1,7 @@
 import React from "react";
 
-// reactstrap components
-
-// core components
 import ExamplesNavbar from "../components/Navbars/ExamplesNavbar";
 import LandingPageHeader from "../components/Headers/LandingPageHeader";
-
-// index sections
 
 import LandingPage from "./examples/LandingPage";
 
@@ -22,8 +17,6 @@ function Index() {
     <>
       <ExamplesNavbar />
       <LandingPageHeader />
-
-
       <div className="main">{<LandingPage />}</div>
     </>
   );
