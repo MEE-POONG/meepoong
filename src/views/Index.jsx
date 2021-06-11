@@ -1,4 +1,3 @@
-
 import React from "react";
 
 // reactstrap components
@@ -6,12 +5,11 @@ import React from "react";
 // core components
 import ExamplesNavbar from "../components/Navbars/ExamplesNavbar";
 import LandingPageHeader from "../components/Headers/LandingPageHeader";
-
+// import Slidecard from "../components/body/Slidecard";
 
 // index sections
 
-
-import LandingPage from"./examples/LandingPage";
+import LandingPage from "./examples/LandingPage";
 
 function Index() {
   document.documentElement.classList.remove("nav-open");
@@ -23,13 +21,15 @@ function Index() {
   });
   return (
     <>
-     <ExamplesNavbar />
+      <ExamplesNavbar />
       <LandingPageHeader />
-      <div className="main">
-        {
-          <LandingPage />
-        }
-      </div>
+      {/* <div className="section section-dark text-center">
+        <div className="container mt-5 ">
+          <Slidecard />
+        </div>
+      </div> */}
+
+      <div className="main">{<LandingPage />}</div>
     </>
   );
 }

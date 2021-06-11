@@ -1,7 +1,11 @@
+
 .section{
     padding: 70px 0;
     position: relative;
     background-color: #FFFFFF;
+    svg{
+        font-size: 5rem;
+    }
 }
 .section-with-space{
     padding: 60px 0;
@@ -25,11 +29,11 @@
     color: $white-color;
 }
 .section-dark-blue{
-    background-color: #506367;
+    background-color:#0b0830;
     color: $white-color;
 }
 .section-dark{
-    background-color: #0b1011;
+    background-color: #040121;
 }
 .section-image,
 .section-gold,

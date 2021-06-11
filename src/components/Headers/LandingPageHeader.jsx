@@ -43,14 +43,22 @@ function LandingPageHeader() {
   function headerContentTitle() {
     return (
       <div className="motto text-center">
-        <BrowserView>
-          <h1>Coder | Designer | Thinker | Blogger</h1>
-        </BrowserView>
-        <MobileView>
-          <h4>Coder | Designer | Thinker | Blogger</h4>
-        </MobileView>
+        {desktopContent()}
+        {mobileContent()}
       </div>
     );
+
+    function mobileContent() {
+      return <MobileView>
+        <h4>Coder | Designer | Thinker | Blogger</h4>
+      </MobileView>;
+    }
+
+    function desktopContent() {
+      return <BrowserView>
+        <h1>Coder | Designer | Thinker | Blogger</h1>
+      </BrowserView>;
+    }
   }
 }
 

@@ -62,7 +62,7 @@ function ExamplesNavbar() {
       title="MEE POONG CO., LTD."
       tag={Link}
     >
-      MEE POONG CO., LTD.
+    MEE POONG CO., LTD.
     </NavbarBrand>
   );
   return (

@@ -5,45 +5,36 @@ import {
   CardBody,
   CardFooter,
   CardTitle,
-  Form,
-  Input,
-  InputGroupAddon,
-  InputGroupText,
-  InputGroup,
   Container,
   Row,
   Col,
 } from "reactstrap";
 import DemoFooter from "components/Footers/DemoFooter";
+import CodeIcon from "@material-ui/icons/Code";
+import ChatBubbleIcon from "@material-ui/icons/ChatBubble";
+import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 
 function LandingPage() {
   const [infoList] = useState([
     {
-      icon: "nc-album-2",
-      title: "activity Gallery",
+      icon: <CodeIcon />,
+      title: "Code",
       description:
-        "Spend your time generating new ideas.You don't have to think of implementing.",
+        "สร้างรากฐานที่มั่นคงทางเทคโนโลยี เพื่อตอบโจทย์ความต้องการของธุรกิจคุณ",
       link: "#pablo",
     },
     {
-      icon: "nc-bulb-63",
-      title: "New Ideas",
+      icon: <FavoriteBorderIcon />,
+      title: "Consult",
       description:
-        "Larger, yet dramatically thinner. More powerful, but remarkably power efficient.",
+        "ให้คำปรึกษาจากผู้เชี่ยวชาญด้านการเปลี่ยนแปลงธุรกิจสู่ดิจิตัลอย่างรอบด้าน",
       link: "#pablo",
     },
     {
-      icon: "nc-chart-bar-32",
-      title: "Statistics",
+      icon: <ChatBubbleIcon />,
+      title: "Communication",
       description:
-        "Choose from a veriety of many colors resembling sugar paper pastels.",
-      link: "#pablo",
-    },
-    {
-      icon: "nc-sun-fog-29",
-      title: "Delightful design",
-      description:
-        "Find unique and handmade delightful designs related items directly from our sellers.",
+        "เพิ่มขีดความสามารถด้วยการสื่อสารที่มีประสิทธิภาพ เพื่อพัฒนาทุกโซลูชั่นของคุณให้ดีเยี่ยม",
       link: "#pablo",
     },
   ]);
@@ -56,241 +47,158 @@ function LandingPage() {
   });
   return (
     <>
-      <div className="main">
-        <div className="section text-center">
-          <Container>
-            {product()}
-            <br />
-            <br />
-            <Row>{mapInfoList()}</Row>
-          </Container>
-        </div>
-        <div className="section section-dark text-center">
-          <Container>
-            <h2 className="title">Let's talk about us</h2>
-            <Row>
-              <Col md="4">
-                <Card className="card-profile card-plain">
-                  <div className="card-avatar">
-                    <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                      <img
-                        alt="..."
-                        src={
-                          require("assets/img/faces/clem-onojeghuo-3.jpg")
-                            .default
-                        }
-                      />
-                    </a>
-                  </div>
-                  <CardBody>
-                    <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                      <div className="author">
-                        <CardTitle tag="h4">Henry Ford</CardTitle>
-                        <h6 className="card-category">Product Manager</h6>
-                      </div>
-                    </a>
-                    <p className="card-description text-center">
-                      Teamwork is so important that it is virtually impossible
-                      for you to reach the heights of your capabilities or make
-                      the money that you want without becoming very good at it.
-                    </p>
-                  </CardBody>
-                  <CardFooter className="text-center">
-                    <Button
-                      className="btn-just-icon btn-neutral"
-                      color="link"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fa fa-twitter" />
-                    </Button>
-                    <Button
-                      className="btn-just-icon btn-neutral ml-1"
-                      color="link"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fa fa-google-plus" />
-                    </Button>
-                    <Button
-                      className="btn-just-icon btn-neutral ml-1"
-                      color="link"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fa fa-linkedin" />
-                    </Button>
-                  </CardFooter>
-                </Card>
-              </Col>
-              <Col md="4">
-                <Card className="card-profile card-plain">
-                  <div className="card-avatar">
-                    <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                      <img
-                        alt="..."
-                        src={
-                          require("assets/img/faces/joe-gardner-2.jpg").default
-                        }
-                      />
-                    </a>
-                  </div>
-                  <CardBody>
-                    <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                      <div className="author">
-                        <CardTitle tag="h4">Sophie West</CardTitle>
-                        <h6 className="card-category">Designer</h6>
-                      </div>
-                    </a>
-                    <p className="card-description text-center">
-                      A group becomes a team when each member is sure enough of
-                      himself and his contribution to praise the skill of the
-                      others. No one can whistle a symphony. It takes an
-                      orchestra to play it.
-                    </p>
-                  </CardBody>
-                  <CardFooter className="text-center">
-                    <Button
-                      className="btn-just-icon btn-neutral"
-                      color="link"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fa fa-twitter" />
-                    </Button>
-                    <Button
-                      className="btn-just-icon btn-neutral ml-1"
-                      color="link"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fa fa-google-plus" />
-                    </Button>
-                    <Button
-                      className="btn-just-icon btn-neutral ml-1"
-                      color="link"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fa fa-linkedin" />
-                    </Button>
-                  </CardFooter>
-                </Card>
-              </Col>
-              <Col md="4">
-                <Card className="card-profile card-plain">
-                  <div className="card-avatar">
-                    <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                      <img
-                        alt="..."
-                        src={
-                          require("assets/img/faces/erik-lucatero-2.jpg")
-                            .default
-                        }
-                      />
-                    </a>
-                  </div>
-                  <CardBody>
-                    <a href="#pablo" onClick={(e) => e.preventDefault()}>
-                      <div className="author">
-                        <CardTitle tag="h4">Robert Orben</CardTitle>
-                        <h6 className="card-category">Developer</h6>
-                      </div>
-                    </a>
-                    <p className="card-description text-center">
-                      The strength of the team is each individual member. The
-                      strength of each member is the team. If you can laugh
-                      together, you can work together, silence isn’t golden,
-                      it’s deadly.
-                    </p>
-                  </CardBody>
-                  <CardFooter className="text-center">
-                    <Button
-                      className="btn-just-icon btn-neutral"
-                      color="link"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fa fa-twitter" />
-                    </Button>
-                    <Button
-                      className="btn-just-icon btn-neutral ml-1"
-                      color="link"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fa fa-google-plus" />
-                    </Button>
-                    <Button
-                      className="btn-just-icon btn-neutral ml-1"
-                      color="link"
-                      href="#pablo"
-                      onClick={(e) => e.preventDefault()}
-                    >
-                      <i className="fa fa-linkedin" />
-                    </Button>
-                  </CardFooter>
-                </Card>
-              </Col>
-            </Row>
-          </Container>
-        </div>
-        <div className="section landing-section">
-          <Container>
-            <Row>
-              <Col className="ml-auto mr-auto" md="8">
-                <h2 className="text-center">Keep in touch?</h2>
-                <Form className="contact-form">
-                  <Row>
-                    <Col md="6">
-                      <label>Name</label>
-                      <InputGroup>
-                        <InputGroupAddon addonType="prepend">
-                          <InputGroupText>
-                            <i className="nc-icon nc-single-02" />
-                          </InputGroupText>
-                        </InputGroupAddon>
-                        <Input placeholder="Name" type="text" />
-                      </InputGroup>
-                    </Col>
-                    <Col md="6">
-                      <label>Email</label>
-                      <InputGroup>
-                        <InputGroupAddon addonType="prepend">
-                          <InputGroupText>
-                            <i className="nc-icon nc-email-85" />
-                          </InputGroupText>
-                        </InputGroupAddon>
-                        <Input placeholder="Email" type="text" />
-                      </InputGroup>
-                    </Col>
-                  </Row>
-                  <label>Message</label>
-                  <Input
-                    placeholder="Tell us your thoughts and feelings..."
-                    type="textarea"
-                    rows="4"
-                  />
-                  <Row>
-                    <Col className="ml-auto mr-auto" md="4">
-                      <Button className="btn-fill" color="danger" size="lg">
-                        Send Message
-                      </Button>
-                    </Col>
-                  </Row>
-                </Form>
-              </Col>
-            </Row>
-          </Container>
-        </div>
+      <div className="section mt-1 text-center">
+        <Container>
+          {product()}
+          <br />
+          <br />
+        </Container>
+      </div>
+      <div className="section-dark mt-1  text-center">
+        <Container>
+          {product2()}
+          <br />
+          <br />
+          <br />
+          <br />
+        </Container>
+      </div>
+      <div className="section  text-center">
+        <Container>
+          <Row>{mapInfoList()}</Row>
+        </Container>
+      </div>
+
+      <div className="section section-dark text-center">
+        <Container>
+          {headerAboutUs()}
+          <Row>
+            <Col md="4">
+              <Card className="card-profile card-plain">
+                <div className="card-avatar">
+                  <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                    {aboutUsImg(
+                      require("assets/img/faces/clem-onojeghuo-3.jpg").default
+                    )}
+                  </a>
+                </div>
+                <CardBody>
+                  <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                    <div className="author">
+                      <CardTitle tag="h4">Warayut Taekrathok </CardTitle>
+                      <h6 className="card-category">Consulting</h6>
+                    </div>
+                  </a>
+                  <p className="card-description text-center">
+                    Teamwork is so important that it is virtually impossible for
+                    you to reach the heights of your capabilities or make the
+                    money that you want without becoming very good at it.
+                  </p>
+                </CardBody>
+                <CardFooter className="text-center">
+                  <Button
+                    className="btn-just-icon btn-neutral ml-1"
+                    color="link"
+                    href="https://www.facebook.com/ChunWarayut"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    <i className="fa fa-facebook" />
+                  </Button>
+                </CardFooter>
+              </Card>
+            </Col>
+            <Col md="4">
+              <Card className="card-profile card-plain">
+                <div className="card-avatar">
+                  <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                    <img
+                      alt="..."
+                      src={
+                        require("assets/img/faces/joe-gardner-2.jpg").default
+                      }
+                    />
+                  </a>
+                </div>
+                <CardBody>
+                  <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                    <div className="author">
+                      <CardTitle tag="h4">Nattavee Tantragool</CardTitle>
+                      <h6 className="card-category">Developer</h6>
+                    </div>
+                  </a>
+                  <p className="card-description text-center">
+                    A group becomes a team when each member is sure enough of
+                    himself and his contribution to praise the skill of the
+                    others. No one can whistle a symphony. It takes an orchestra
+                    to play it.
+                  </p>
+                </CardBody>
+                <CardFooter className="text-center">
+                  <Button
+                    className="btn-just-icon btn-neutral ml-1"
+                    color="link"
+                    href="https://www.facebook.com/devilzeros"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    <i className="fa fa-facebook" />
+                  </Button>
+                </CardFooter>
+              </Card>
+            </Col>
+            <Col md="4">
+              <Card className="card-profile card-plain">
+                <div className="card-avatar">
+                  <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                    <img
+                      alt="..."
+                      src={require("assets/img/faces/tata.jpg").default}
+                    />
+                  </a>
+                </div>
+                <CardBody>
+                  <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                    <div className="author">
+                      <CardTitle tag="h4">Sunaina Chaiyapan</CardTitle>
+                      <h6 className="card-category">Developer</h6>
+                    </div>
+                  </a>
+                  <p className="card-description text-center">
+                    The strength of the team is each individual member. The
+                    strength of each member is the team. If you can laugh
+                    together, you can work together, silence isn’t golden, it’s
+                    deadly.
+                  </p>
+                </CardBody>
+                <CardFooter className="text-center">
+                  <Button
+                    className="btn-just-icon btn-neutral ml-1"
+                    color="link"
+                    href="https://www.facebook.com/ItmeTaTa/"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    <i className="fa fa-facebook" />
+                  </Button>
+                </CardFooter>
+              </Card>
+            </Col>
+          </Row>
+        </Container>
       </div>
       <DemoFooter />
     </>
   );
 
+  function headerAboutUs() {
+    return <h2 className="title">Let's know about us</h2>;
+  }
+
+  function aboutUsImg(img) {
+    return <img alt="..." src={img} />;
+  }
+
   function infoBlog(icon, title, description, link) {
     return (
-      <Col md="3">
+      <Col md="4">
         <div className="info">
           {infoIcon(icon)}
           {infoContent(title, description, link)}
@@ -300,11 +208,7 @@ function LandingPage() {
   }
 
   function infoIcon(icon) {
-    return (
-      <div className="icon icon-info">
-        <i className={`nc-icon ${icon}`} />
-      </div>
-    );
+    return <div className="icon icon-info">{icon}</div>;
   }
   function mapInfoList() {
     return infoList.map(({ icon, title, description, link }) => (
@@ -339,43 +243,59 @@ function LandingPage() {
 
   function product() {
     return (
-      <Row>
-        <Col className="ml-auto mr-auto" md="8">
-          {productTitle()}
-          {productDescription()}
-          <br />
-          {productButton()}
-        </Col>
-      </Row>
+      <div className="container">
+        {productTitle()}
+        {productDescription()}
+        <br />
+        {/* {productButton()} */}
+      </div>
     );
   }
-
-  function productButton() {
+  function product2() {
     return (
-      <Button
-        className="btn-round"
-        color="info"
-        href="#pablo"
-        onClick={(e) => e.preventDefault()}
-      >
-        See Details
-      </Button>
+      <div className="container">
+        {productTitle2()}
+        {productDescription2()}
+        <br />
+      </div>
     );
   }
-
   function productDescription() {
     return (
       <h5 className="description">
-        This is the paragraph where you can write more details about your p er
-        engaged by providing meaningful information.Remembe e, the user is
-        curious, otherwise he wouldn't scroll to tton if you want the user to
-        see more.
+        เรามีบริการทางด้านเทคโนโลยีที่ทันสมัยสำหรับองค์กร และผู้ใช้งานจริง
+        เพื่อส่งเสริมระบบการทำงานปัจจุบันของคุณ
+        และก่อให้เกิดการพัฒนาและเปลี่ยนแปลงอย่างต่อเนื่อง
+        เพิ่มขีดความสามารถขององค์กรคุณให้พร้อมรับมือได้ทุกสถานการณ์
+        <br />
+        เพราะเราเชื่อว่าการพัฒนากระบวนการทำงานด้วยเทคโนโลยีและนวัตกรรมเป็นสิ่งที่จำเป็นและสำคัญมากในอนาคต
       </h5>
     );
   }
 
   function productTitle() {
-    return <h2 className="title">Let's talk product</h2>;
+    return <h2 className="title">WHO ARE WE?</h2>;
+  }
+  function productDescription2() {
+    return (
+      <h5 className="description">
+        เราตั้งใจที่จะสร้างความเปลี่ยนแปลงทางด้านดิจิทัลและเทคโนโลยีให้กับทุกองค์กร
+        และเชื่อเป็นอย่างยิ่งว่าเราสามารถช่วยทุกองค์กร
+        ในการเตรียมพร้อมต่อโลกที่เปลี่ยนแปลงได้อย่างเต็มรูปแบบ
+        นอกจากนี้เรามุ่งหวังการส่งมอบแง่มุมทางธุรกิจ (Business)
+        ผสมผสานกับการประยุกต์ใช้เทคโนโลยีในองค์กร (Technological Insight)
+        เข้าด้วยกัน เพื่อต่อยอดและพัฒนาทุกองค์กรให้เป็น Data Driven Organization
+        ได้อย่างมีประสิทธิภาพ
+      </h5>
+    );
+  }
+
+  function productTitle2() {
+    return (
+      <h2 className="title pt-5">
+        <div className="pt-5">OUR MISSION</div>
+      </h2>
+    );
   }
 }
 
