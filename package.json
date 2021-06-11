@@ -27,8 +27,7 @@
     "minify-sass": "node-sass src/assets/scss/paper-kit.scss src/assets/css/paper-kit.min.css --output-style compressed",
     "map-sass": "node-sass src/assets/scss/paper-kit.scss src/assets/css/paper-kit.css --source-map true",
     "gulp": "gulp",
-    "minify": "gulp minify",
-    "licenses": "gulp licenses"
+    "minify": "gulp minify"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -52,8 +51,7 @@
   "devDependencies": {
     "bootstrap": "4.6.0",
     "gulp": "^4.0.2",
-    "gulp-append-prepend": "^1.0.9",
-    "gulp-minify-css": "^1.2.4"
+    "gulp-append-prepend": "^1.0.9"
   },
   "description": "MEE POONG CO., LTD.",
   "main": "src/assets/scss/paper-kit.scss",
