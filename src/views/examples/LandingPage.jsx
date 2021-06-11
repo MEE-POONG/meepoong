@@ -84,7 +84,7 @@ function LandingPage() {
       <div className="section section-dark text-center">
         <Container>
           {headerAboutUs()}
-          <Row>
+          {/* <Row>
             <Col md={{ size: 4, offset: 4, order: 4 }}>
               <Card className="card-profile card-plain">
                 <div className="card-avatar">
@@ -119,7 +119,7 @@ function LandingPage() {
                 </CardFooter>
               </Card>
             </Col>
-          </Row>
+          </Row> */}
           <Row>
             <Col md="4">
               <Card className="card-profile card-plain">
