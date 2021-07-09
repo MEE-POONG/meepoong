@@ -173,7 +173,7 @@ function LandingPage() {
                   <a href="#pablo" onClick={(e) => e.preventDefault()}>
                     <div className="author">
                       <CardTitle tag="h4">Sunaina Chaiyapan</CardTitle>
-                      <h6 className="card-category">Developer</h6>
+                      <h6 className="card-category">Junior Developer</h6>
                     </div>
                   </a>
                   <p className="card-description text-center">
@@ -209,7 +209,7 @@ function LandingPage() {
                   <a href="#pablo" onClick={(e) => e.preventDefault()}>
                     <div className="author">
                       <CardTitle tag="h4">Yuranan Prachuapsuk</CardTitle>
-                      <h6 className="card-category">Quality Assurance</h6>
+                      <h6 className="card-category">Head of Youtube Video Production</h6>
                     </div>
                   </a>
                   <p className="card-description text-center">
@@ -222,7 +222,108 @@ function LandingPage() {
                   <Button
                     className="btn-just-icon btn-neutral ml-1"
                     color="link"
-                    href="https://www.facebook.com/ItmeTaTa/"
+                    href="https://www.facebook.com/ningnong.yuranan"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    <i className="fa fa-facebook" />
+                  </Button>
+                </CardFooter>
+              </Card>
+            </Col>
+            <Col md="4">
+              <Card className="card-profile card-plain">
+                <div className="card-avatar">
+                  <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                    <img
+                      alt="..."
+                      src={require("assets/img/faces/anchisa.jpeg").default}
+                    />
+                  </a>
+                </div>
+                <CardBody>
+                  <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                    <div className="author">
+                      <CardTitle tag="h4">Anchisa Piankarn</CardTitle>
+                      <h6 className="card-category">Head of Marketing</h6>
+                    </div>
+                  </a>
+                  <p className="card-description text-center">
+                    Always be hungry in what you wanna do
+                    make plans, take risk, work hard, play hard and have no regrets
+
+                  </p>
+                </CardBody>
+                <CardFooter className="text-center">
+                  <Button
+                    className="btn-just-icon btn-neutral ml-1"
+                    color="link"
+                    href="https://www.facebook.com/profile.php?id=100051367160916"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    <i className="fa fa-facebook" />
+                  </Button>
+                </CardFooter>
+              </Card>
+            </Col>
+            <Col md="4">
+              <Card className="card-profile card-plain">
+                <div className="card-avatar">
+                  <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                    <img
+                      alt="..."
+                      src={require("assets/img/faces/Chattarika.png").default}
+                    />
+                  </a>
+                </div>
+                <CardBody>
+                  <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                    <div className="author">
+                      <CardTitle tag="h4">Chattarika Tosanguan</CardTitle>
+                      <h6 className="card-category">Marketing</h6>
+                    </div>
+                  </a>
+                  <p className="card-description text-center">
+                    They say every piece of chocolate you eat shortens your life by 2 minutes.  I did the math.  Seems I died in  2000.
+                  </p>
+                </CardBody>
+                <CardFooter className="text-center">
+                  <Button
+                    className="btn-just-icon btn-neutral ml-1"
+                    color="link"
+                    href="https://www.facebook.com/chtrka"
+                    onClick={(e) => e.preventDefault()}
+                  >
+                    <i className="fa fa-facebook" />
+                  </Button>
+                </CardFooter>
+              </Card>
+            </Col>
+            <Col md="4">
+              <Card className="card-profile card-plain">
+                <div className="card-avatar">
+                  <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                    <img
+                      alt="..."
+                      src={require("assets/img/faces/Rungpraw.jpeg").default}
+                    />
+                  </a>
+                </div>
+                <CardBody>
+                  <a href="#pablo" onClick={(e) => e.preventDefault()}>
+                    <div className="author">
+                      <CardTitle tag="h4">Rungpraw Phiwsaard</CardTitle>
+                      <h6 className="card-category">Marketing</h6>
+                    </div>
+                  </a>
+                  <p className="card-description text-center">
+                    I weighed myself today.  <br /> It is clear I am too small for my weight.<br /> &nbsp;
+                  </p>
+                </CardBody>
+                <CardFooter className="text-center">
+                  <Button
+                    className="btn-just-icon btn-neutral ml-1"
+                    color="link"
+                    href="https://www.facebook.com/warp.rungpraw"
                     onClick={(e) => e.preventDefault()}
                   >
                     <i className="fa fa-facebook" />
