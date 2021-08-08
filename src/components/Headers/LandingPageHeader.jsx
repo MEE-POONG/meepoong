@@ -21,7 +21,7 @@ function LandingPageHeader() {
   return (
     <div
       style={{
-        backgroundImage: "url(" + require("assets/img/26198.jpg").default + ")",
+        backgroundImage: "url(" + require("assets/img/vector1.jpeg").default + ")",
       }}
       className="page-header"
       data-parallax={true}
@@ -43,6 +43,9 @@ function LandingPageHeader() {
   function headerContentTitle() {
     return (
       <div className="motto text-center">
+        {/* <img src={require("assets/img/logom.png").default} width="145" alt="MEE POONG GROUP LOGO" className="rounded-circle bg-white" /> */}
+        <img src={require("assets/img/logomm.png").default} width="245" alt="MEE POONG GROUP LOGO" className="shadow-logo" />
+        <p className="p-2"> </p>
         {desktopContent()}
         {mobileContent()}
       </div>
@@ -50,13 +53,13 @@ function LandingPageHeader() {
 
     function mobileContent() {
       return <MobileView>
-        <h4>Coder | Designer | Thinker | Blogger</h4>
+        <h5 className="font-weight-bold">Coder <span className="text-coder"> | </span> Designer <span className="text-designer"> | </span>  Thinker <span className="text-thinker"> | </span>  Blogger <span className="text-blocker"> | </span>  Marketer</h5>
       </MobileView>;
     }
 
     function desktopContent() {
       return <BrowserView>
-        <h3>Coder | Designer | Thinker | Blogger</h3>
+        <h2 className="font-weight-bold">Coder <span className="text-coder"> | </span>  Designer <span className="text-designer"> | </span>  Thinker <span className="text-thinker"> | </span>  Blogger <span className="text-blocker"> | </span>  Marketer</h2>
       </BrowserView>;
     }
   }

@@ -15,12 +15,13 @@ import ChatBubbleIcon from "@material-ui/icons/ChatBubble";
 import FavoriteBorderIcon from "@material-ui/icons/FavoriteBorder";
 import PeopleAltRoundedIcon from "@material-ui/icons/PeopleAltRounded";
 import LocalAirportIcon from "@material-ui/icons/LocalAirport";
+import Covid19Page from "./Covid19Page";
 function LandingPage() {
   const [product] = useState([
     {
       icon: (
         <PeopleAltRoundedIcon
-          style={{
+          Style={{
             fontSize: "88px",
           }}
         />
@@ -32,7 +33,7 @@ function LandingPage() {
     {
       icon: (
         <LocalAirportIcon
-          style={{
+          Style={{
             fontSize: "88px",
           }}
         />
@@ -74,6 +75,7 @@ function LandingPage() {
   });
   return (
     <>
+      <Covid19Page />
       {mapProduct()}
       <div className="section  text-center">
         <Container className="m-py-6">
@@ -83,6 +85,7 @@ function LandingPage() {
 
       <div className="section section-dark text-center">
         <Container>
+
           {headerAboutUs()}
           {/* <Row>
             <Col md={{ size: 4, offset: 4, order: 4 }}>

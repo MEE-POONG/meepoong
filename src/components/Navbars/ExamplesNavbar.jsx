@@ -59,10 +59,10 @@ function ExamplesNavbar() {
       data-placement="bottom"
       to="/index"
       target="_blank"
-      title="MEE POONG CO., LTD."
+      title="MEE POONG GROUP"
       tag={Link}
     >
-    MEE POONG CO., LTD.
+      <img src={require("assets/img/logom.png").default} width="45" alt="MEE POONG GROUP LOGO" className="rounded-circle bg-white" /> <span className="pl-2 font-weight-bold">MEE POONG GROUP</span>
     </NavbarBrand>
   );
   return (

@@ -32,8 +32,15 @@
     background-color:#0b0830;
     color: $white-color;
 }
+.section-dark-covid19 {
+    padding-top: 200px;
+    padding-bottom: 200px;
+    background-image: url('../../img/220448662_366547131578082_6086501777476027800_n.jpeg');
+    background-size: cover;
+    color: $white-color;
+}
 .section-dark{
-    background-color: #040121;
+    background-image: linear-gradient( 113.3deg,  rgba(217,9,27,1) 6.9%, rgba(22,68,150,1) 75% );
 }
 .section-image,
 .section-gold,
