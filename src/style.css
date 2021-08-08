@@ -167,7 +167,9 @@
 h2, .h2 {
   font-size: 3.8em;
 }
-
+.h2825 {
+  font-size: 2.825em !important;
+}
 .text-coder {
   color: #03A9F4;
 }
