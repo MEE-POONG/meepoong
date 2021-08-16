@@ -15,7 +15,7 @@ const SlideList = [
         textPosition: 'text-left',
         category: 'Freelance digital designer',
         title: 'Hello, I’m <span>Fatima.</span>',
-        description: 'I’m working on a professional, visually sophisticated and technologically <br /> proficient, responsive and multi-functional React Template mee poong.',
+        description: 'I’m working on a professional, visually sophisticated and technologically <br /> proficient, responsive and multi-functional React Template meepoong.',
         buttonText: 'Download CV',
         buttonLink: ''
     }

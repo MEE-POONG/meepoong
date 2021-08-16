@@ -7,7 +7,7 @@ const CallAction = () => {
                     <div className="col-lg-12">
                         <div className="inner text-center">
                             <h2>Ready to start creating a standard website?</h2>
-                            <a className="btn-default btn-border btn-large btn-white mt--40" href="/contact"><span>Purchase mee poong</span></a>
+                            <a className="btn-default btn-border btn-large btn-white mt--40" href="/contact"><span>Purchase meepoong</span></a>
                         </div>
                     </div>
                 </div>

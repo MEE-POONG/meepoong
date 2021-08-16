@@ -298,7 +298,7 @@ class InteriorLanding extends Component{
                                     <div className="inner text-center">
                                         <h2>Ready to start creating a standard website?</h2>
                                         <p>Finest choice for your home & office</p>
-                                        <a className="btn-default btn-large btn-hover-white mt--50 mt_sm--30 mt_md--30" href="/contact"><span>Purchase mee poong</span></a>
+                                        <a className="btn-default btn-large btn-hover-white mt--50 mt_sm--30 mt_md--30" href="/contact"><span>Purchase meepoong</span></a>
                                     </div>
                                 </div>
                             </div>

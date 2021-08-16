@@ -29,7 +29,7 @@ const SlideList = [
         category: '',
         title: 'Introduce Our <br /> Creative Agency.',
         description: 'There are many variations of passages of Lorem Ipsum <br /> available but the majority have suffered alteration.',
-        buttonText: 'mee poong Service',
+        buttonText: 'meepoong Service',
         buttonText2: 'See Projects',
         buttonLink: '/contact',
         buttonLink2: '/portfolio'

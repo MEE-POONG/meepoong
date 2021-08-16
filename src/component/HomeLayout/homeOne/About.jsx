@@ -28,7 +28,7 @@ class About extends Component{
                                         <p className="description">{description}</p>
                                         <p className="description">{description2}</p>
                                         <div className="purchase-btn">
-                                            <Link className="btn-transparent" to="/">PURCHASE mee poong</Link>
+                                            <Link className="btn-transparent" to="/">PURCHASE meepoong</Link>
                                         </div>
                                     </div>
                                     

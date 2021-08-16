@@ -68,7 +68,7 @@ const ServiceList = [
 //     {
 //         icon: <FiCode />,
 //         title: 'Well Documented Codes',
-//         subtitle: 'The mee poong code is awesome well documented code. And Its customization is very easily'
+//         subtitle: 'The MEE POONG code is awesome well documented code. And Its customization is very easily'
 //     },
 //     {
 //         icon: <FaSass />,
@@ -78,12 +78,12 @@ const ServiceList = [
 //     {
 //         icon: <FiDownload />,
 //         title: 'Fast Loading Speed',
-//         subtitle: 'mee poong is faster loading speed.mee poong create your theme so much faster '
+//         subtitle: 'MEE POONG is faster loading speed.MEE POONG create your theme so much faster '
 //     },
 //     {
 //         icon: <FiCommand />,
 //         title: 'Modern Design',
-//         subtitle: 'mee poong is a modern creatuve design for Creative Agency , Personal Portfolio etc....'
+//         subtitle: 'MEE POONG is a modern creatuve design for Creative Agency , Personal Portfolio etc....'
 //     },
 //     {
 //         icon: <FiHeadphones />,
@@ -93,7 +93,7 @@ const ServiceList = [
 //     {
 //         icon: <FiBold />,
 //         title: 'Bootstrap Comfortable',
-//         subtitle: 'Bootstrap comfortable is available in mee poong. So layout changes is so much easily'
+//         subtitle: 'Bootstrap comfortable is available in MEE POONG. So layout changes is so much easily'
 //     }
 // ]
 
@@ -520,7 +520,7 @@ class Demo extends Component {
                         <div className="header-left">
                             <div className="logo">
                                 <a href="/" style={{ textAlignLast: 'center' }}>
-                                    <img src="/assets/images/logo/logo.png" alt="MEE POONG, mee poong, meepoong" />
+                                    <img src="/assets/images/logo/logo.png" alt="MEE POONG" />
                                     <br />
                                     <h5 className="title theme-gradient">MEE POONG GROUP</h5>
                                 </a>
@@ -535,13 +535,13 @@ class Demo extends Component {
                                     {/* <li><a href="#demo">View Demo</a></li> */}
                                     {/* <li><a href="#feature">Feature</a></li> */}
                                     {/* <li><a href="#faq">FAQ</a></li> */}
-                                    {/* <li><a href="http://rainbowit.net/docs/mee poong/">Documentation</a></li> */}
+                                    {/* <li><a href="http://rainbowit.net/docs/MEE POONG/">Documentation</a></li> */}
                                     {/* <li><a href="https://support.rainbowit.net/support/">Friendly Support</a> </li> */}
                                 </ul>
                             </nav>
 
                             <div className="header-btn">
-                                <a className="btn-default" rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/meepoong">
+                                <a className="btn-default" rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/MEE POONG">
                                     <span>ติดต่อเรา</span>
                                 </a>
                             </div>
@@ -829,7 +829,7 @@ class Demo extends Component {
                             <div className="row">
                                 <div className="col-lg-12">
                                     <div className="section-title text-center pb--30">
-                                        <span className="subtitle">Our mee poong Feature</span>
+                                        <span className="subtitle">Our MEE POONG Feature</span>
                                         <h2 className="title">Awesome Feature</h2>
                                     </div>
                                 </div>
@@ -872,22 +872,22 @@ class Demo extends Component {
                                             <AccordionItem >
                                                 <AccordionItemHeading>
                                                     <AccordionItemButton>
-                                                        What is mee poong ? How does it work?
+                                                        What is MEE POONG ? How does it work?
                                                     </AccordionItemButton>
                                                 </AccordionItemHeading>
                                                 <AccordionItemPanel>
-                                                    <p>Welcome to mee poong React Creative Agency, React Portfolio and Corporate Multi Purpose Template Built With React JS. NO jQuery!. It works too much faster loading speed and you can works too much comfortability.mee poong create your website so much faster, use to use and Well Documented Codes for your customization.</p>
+                                                    <p>Welcome to MEE POONG React Creative Agency, React Portfolio and Corporate Multi Purpose Template Built With React JS. NO jQuery!. It works too much faster loading speed and you can works too much comfortability.MEE POONG create your website so much faster, use to use and Well Documented Codes for your customization.</p>
                                                 </AccordionItemPanel>
                                             </AccordionItem>
 
                                             <AccordionItem>
                                                 <AccordionItemHeading>
                                                     <AccordionItemButton>
-                                                        How can I run mee poong react template?
+                                                        How can I run MEE POONG react template?
                                                     </AccordionItemButton>
                                                 </AccordionItemHeading>
                                                 <AccordionItemPanel>
-                                                    <p>You can run mee poong easily.
+                                                    <p>You can run MEE POONG easily.
                                                         First You'll need to have node and npm on your machine.
                                                         So Please open your command prompt then check your node -v and npm -v Version.
                                                         Goes To Your your command prompt: then
@@ -918,7 +918,7 @@ class Demo extends Component {
                                                 </AccordionItemHeading>
                                                 <AccordionItemPanel>
                                                     <p>
-                                                        Yes, We will get update the mee poong. And you can get it any time. Next time we will comes with more feature.
+                                                        Yes, We will get update the MEE POONG. And you can get it any time. Next time we will comes with more feature.
                                                         You can be get update for unlimited times. Our dedicated team works for update.
                                                     </p>
                                                 </AccordionItemPanel>
@@ -970,7 +970,7 @@ class Demo extends Component {
                                         <span>Make Your Site super faster and easy.</span>
                                         <h2 className="mt--20 theme-gradient font-700">Let's go to Contacts</h2>
                                         <div className="footer-btn mt--35">
-                                            <a className="btn-default" href="https://www.facebook.com/meepoong"><span>Contacts Now</span></a>
+                                            <a className="btn-default" href="https://www.facebook.com/MEE POONG"><span>Contacts Now</span></a>
                                         </div>
                                     </div>
                                 </div>

@@ -40,7 +40,7 @@ class AboutThree extends Component {
                                             })}
                                         </ul>
                                         <div className="purchase-btn mt--30">
-                                            <Link className="btn-transparent" to="/">PURCHASE mee poong</Link>
+                                            <Link className="btn-transparent" to="/">PURCHASE meepoong</Link>
                                         </div>
                                     </div>
                                     
