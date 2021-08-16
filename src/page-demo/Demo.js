@@ -541,7 +541,7 @@ class Demo extends Component {
                             </nav>
 
                             <div className="header-btn">
-                                <a className="btn-default" rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/MEE POONG">
+                                <a className="btn-default" rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/meepoong">
                                     <span>ติดต่อเรา</span>
                                 </a>
                             </div>
@@ -970,7 +970,7 @@ class Demo extends Component {
                                         <span>Make Your Site super faster and easy.</span>
                                         <h2 className="mt--20 theme-gradient font-700">Let's go to Contacts</h2>
                                         <div className="footer-btn mt--35">
-                                            <a className="btn-default" href="https://www.facebook.com/MEE POONG"><span>Contacts Now</span></a>
+                                            <a className="btn-default" href="https://www.facebook.com/meepoong"><span>Contacts Now</span></a>
                                         </div>
                                     </div>
                                 </div>
