@@ -941,7 +941,8 @@ Slider Default Button And Dot STyle
             text-transform: uppercase;
             font-size: 65px;
             @media #{$sm-layout} {
-                font-size: 35px;
+                padding-top: 35px;
+                font-size: 32px;
                 line-height: 45px;
             }
         }
@@ -950,8 +951,8 @@ Slider Default Button And Dot STyle
         &.title {
             text-transform: uppercase;
             @media #{$sm-layout} {
-                font-size: 24px;
-                line-height: 30px;
+                font-size: 15px;
+                line-height: 25px;
             }
         }
     }
