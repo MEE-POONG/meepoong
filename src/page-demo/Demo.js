@@ -33,6 +33,7 @@ import { MdLocalHospital } from "react-icons/md";
 import { BiGhost } from "react-icons/bi";
 import { BsPeopleFill } from "react-icons/bs";
 import { RiPlantFill } from "react-icons/ri";
+import SkilledTeam from "../elements/SkilledTeam";
 
 
 const ServiceList = [
@@ -529,9 +530,10 @@ class Demo extends Component {
                         <div className="header-right">
                             <nav className="mainmenunav d-lg-block">
                                 <ul className="mainmenu">
-                                    <li><a href="#covid">Covid 19</a></li>
-                                    <li><a href="#we">WHO ARE WE</a></li>
+                                    <li><a href="#covid-19">Covid 19</a></li>
+                                    <li><a href="#who-are-we">WHO ARE WE</a></li>
                                     <li><a href="#mission">MISSION</a></li>
+                                    <li><a href="#brand-top-clients">BRAND</a></li>
                                     {/* <li><a href="#demo">View Demo</a></li> */}
                                     {/* <li><a href="#feature">Feature</a></li> */}
                                     {/* <li><a href="#faq">FAQ</a></li> */}
@@ -609,7 +611,7 @@ class Demo extends Component {
                 <div className="main-wrapper">
 
                     {/* Start Main Demo Area  */}
-                    <div id="covid" className="home-demo-area bg_color--1 ptb--120">
+                    <div id="covid-19" className="home-demo-area bg_color--1 ptb--120">
                         <div className="wrapper plr--120">
                             <div className="row">
                                 <div className="col-lg-12">
@@ -645,7 +647,7 @@ class Demo extends Component {
                     {/* End Main Demo Area  */}
 
                     {/* Start Main WHO ARE WE Area  */}
-                    <div id="we" className="home-demo-area bg_color--6 ptb--340">
+                    <div id="who-are-we" className="home-demo-area bg_color--6 ptb--340">
                         <div className="wrapper plr--340">
                             <div className="row">
                                 <div className="col-lg-12">
@@ -679,6 +681,10 @@ class Demo extends Component {
                         </div>
                     </div>
                     {/* End Main WHO ARE WE Area  */}
+
+                    {/* Start Main Skilled Team Area  */}
+                    <SkilledTeam />
+                    {/* End Main Skilled Team Area  */}
 
                     {/* Start Main Demo Area  */}
                     {/* <div id="demo" className="home-demo-area bg_color--1 ptb--120">
