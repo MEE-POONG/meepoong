@@ -519,7 +519,7 @@ class Demo extends Component {
                     <div className="header-wrapper" id="header-wrapper">
                         <div className="header-left">
                             <div className="logo">
-                                <a href="/" style={{ textAlignLast: 'center', textAlign: 'center', textAlign: '-webkit-center' }}>
+                                <a href="/" style={{ textAlignLast: 'center', textAlign: '-webkit-center' }}>
                                     <img src="/assets/images/logo/logo.png" alt="MEE POONG" />
                                     <br />
                                     <h5 className="title theme-gradient">MEE POONG GROUP</h5>
