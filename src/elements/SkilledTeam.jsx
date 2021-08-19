@@ -35,7 +35,7 @@ const teamList = [
     },
     {
         url: 'https://www.facebook.com/Chef.Anchisa',
-        imageUrl: 'https://lh3.googleusercontent.com/cQ5DxTDUA8KgaZCxT4x97OvCCu_w-ToueR-0rmYjT2U2g0bXa9nNVC9QKsIPJ9YNqZ6AZ-kaGj_JBfR_g80hfsOicPDjDaORvFW5khIfVbnxwoGYzdmKYB1v_saDpSUKq7oGuubay5GSZO1sfoUrvvIVX8xETSNq_VBPwJhbTzoTdYSP9DdnpRFxV2nUArPGIwXNWwJvvFlRtZrO5YNaFXoAuEJQpqDIoR9uKo0qAxzuXzqIQ5nVuN3xG1q5Agodo4YpKQBap7bGTyu9J0iQxaQBMsUS1YRaFuwB0ETNcGCLVrTYNg90cLtyp-H-C_GjjAlN12KFHKp2aUrkMIC_qho6ruZDxmo6DDH6O1y2FUOg9PEUO6EEm_X8LrEnbMy7EIHAhjQ764QbSANbs5wLQIPyr9zI2diZnKCq0t7l7YOVs1kA8DK_jDGyYco9g0LG8URP4LIaZ6dYF3P3OH6zMFI7v4QRIXbQorwzn5AMo2k_Gt1FzEXak2oPGdL2njwPtb7M19GQqwAEu328bdS2spNpOdQ7oW1rSCM071BhTp9lIgdu6bgBolyyN83aOx-Em-babaSopjCe83rs8Q52mnmaVpHmxgaCbNZGPMPK5PJepqw_wSaARdapHZwwv0jEn_ZamjHKUvHr3q3QGQ6ylGINftWqbk2vN3Ts2gp8ib8vZL_sOYCEzGQk_Eqoq0JtlaY3WF4xPHmyfqwyXVKAR5Y=w732-h976-no?authuser=1',
+        imageUrl: 'https://lh3.googleusercontent.com/pw/AM-JKLVe2Kyhe4RZ0QkAoVZ6CEUBEKx38DMHHhIA36_0GjDlTGSeZcgrhiM6GZDo-jP9FFG-iUfIc2t7nFmioA2FW-wqDEC1U1mS1sBipvrN3X9DGbQJWq-TCO4-SNWQNQJQJhcmxWDzpeBVdKBX21jOnpbm=w1342-h1788-no?authuser=0',
         title: 'นางสาวอัญชิสา เพียรการ',
         designation: 'Head of Marketing',
     },
@@ -47,7 +47,7 @@ const teamList = [
     },
     {
         url: 'https://www.facebook.com/warp.rungpraw',
-        imageUrl: 'https://lh3.googleusercontent.com/hyoePTctjOnyp5vdPQnP-IdA-JUHYZsckbH9RJnqlsbNAzddfZlj1WPakF9gkpjyeG9tJtjcQntSRORPvfEeqKTWSrSOFM6KUvAL5tO09DlqCjesdzeBHd4t2U_lN9D4oSfiDTLjZjX0xBnrwORAHnSsoCN4ahMNQBHA8zQIJYNW7XLrHzJqOKxCDgZVCpJI_bny2hj-iSuZziT5baih5NwCeorYEeckWHpfxjEvzHg3dbo0YHHjd7XSXv-ElICugiJG-t_kaLr0ZRKNsPPtSwPzhxFAjOvLj8cd63BwwmGt6ptPEEx2zIP_o4kbYh0X-NZwZHjgk9VvnphasEEDHgKBOBiNfMnrmAGo717TWNLPJWEWAnqF1jdmfyWtvrYyb3UMYSSeSrvJ8bxLm4GENRBFwGQA-XUQyVep93fWdAAvb1eXqrqYCZSywF2Ecqsu9xf_oNzRhAlVivUjxD8QKloo8f6hSNxDVAoHrzBYvtSTge_cjGcSbmXGa5LXQJ2_CdX1k1WjVGM_7QLJj_YsrWkgKevNyPoRO_yi_rTZDpaWUV9Y-ugjguukc8f9JJqTlKPSKr1LW8t1k87cACImocqXy_sqk8eMbqjsQiaD_2LHd8K1tW_Oflho-b9TOzRPjhyYOIaqdSCQJTP9TqEtXKyW9PxM5J7evG9htKCeXlYLgkJUozq-KCuR8sc-ukZ1NieVN-QHCW8Mnm2FVG_bCEA=w732-h976-no?authuser=1',
+        imageUrl: 'https://lh3.googleusercontent.com/pw/AM-JKLUvHOcgOVv9gnZ0_N5bUtEUTVYlCbJlUfgHmaSLZGe2aoshtP718XmG8LAIKd-zyB9C9nOn6Xaf34VG8ENJJRw0qmy37AjrUFzKcSBKuLyw4u_1ZMr1XiFDwxRP5gDCO4dancKcgixVBHtD5sDTFrKb=w1342-h1788-no?authuser=0',
         title: 'นางสาวรุ้งแพรว ผิวสอาด',
         designation: 'Marketing',
     },

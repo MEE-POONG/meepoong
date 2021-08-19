@@ -34,6 +34,8 @@ import { BiGhost } from "react-icons/bi";
 import { BsPeopleFill } from "react-icons/bs";
 import { RiPlantFill } from "react-icons/ri";
 import SkilledTeam from "../elements/SkilledTeam";
+import dayjs from "dayjs";
+import 'dayjs/locale/th'
 
 
 const ServiceList = [
@@ -444,16 +446,16 @@ class Demo extends Component {
         super(props);
         this.state = {
             todayCovid: {
-                Confirmed: 736522,
-                Deaths: 6066,
-                DevBy: "https://www.kidkarnmai.com/",
-                Hospitalized: 213444,
-                NewConfirmed: 21838,
-                NewDeaths: 212,
+                cases: 736522,
+                deaths: 6066,
+                DevBy: "https://corona.lmao.ninja/v2/countries/TH",
+                active: 213444,
+                todayCases: 21838,
+                todayDeaths: 212,
                 NewHospitalized: 518,
-                NewRecovered: 21108,
-                Recovered: 517012,
-                UpdateDate: "07/08/2021 13:14"
+                todayRecovered: 21108,
+                recovered: 517012,
+                updated: "1629382499758"
             }
         };
         this.menuTrigger = this.menuTrigger.bind(this);
@@ -462,7 +464,7 @@ class Demo extends Component {
         window.addEventListener('load', function () {
             console.log('All assets are loaded')
         })
-        fetch("https://covid19.th-stat.com/json/covid19v2/getTodayCases.json").then(e => e.json()).then(e => {
+        fetch("https://corona.lmao.ninja/v2/countries/TH").then(e => e.json()).then(e => {
             this.setState({ todayCovid: e })
         })
     }
@@ -485,23 +487,23 @@ class Demo extends Component {
         let covid19List = [
             {
                 icon: <MdPersonAdd />,
-                title: `ติดเชื้อ : ${currencyFormat(todayCovid.NewConfirmed)}`,
-                subtitle: `(สะสม ${currencyFormat(todayCovid.Confirmed)})`
+                title: `ติดเชื้อ : ${currencyFormat(todayCovid.todayCases)}`,
+                subtitle: `(สะสม ${currencyFormat(todayCovid.cases)})`
             },
             {
                 icon: <GiHomeGarage />,
-                title: `หายแล้ว : ${currencyFormat(todayCovid.Recovered)}`,
-                subtitle: `(เพิ่มขึ้น ${currencyFormat(todayCovid.NewRecovered)})`
+                title: `หายแล้ว : ${currencyFormat(todayCovid.recovered)}`,
+                subtitle: `(เพิ่มขึ้น ${currencyFormat(todayCovid.todayRecovered)})`
             },
             {
                 icon: <MdLocalHospital />,
-                title: `รักษาอยู่ : ${currencyFormat(todayCovid.Hospitalized)}`,
+                title: `รักษาอยู่ : ${currencyFormat(todayCovid.active)}`,
                 subtitle: <span>&nbsp;</span>
             },
             {
                 icon: <BiGhost />,
-                title: `เสียชีวิต : ${currencyFormat(todayCovid.NewDeaths)} `,
-                subtitle: `(สะสม ${currencyFormat(todayCovid.Deaths)} )`
+                title: `เสียชีวิต : ${currencyFormat(todayCovid.todayDeaths)} `,
+                subtitle: `(สะสม ${currencyFormat(todayCovid.deaths)} )`
             },
         ];
         for (var i in elements) {
@@ -617,8 +619,8 @@ class Demo extends Component {
                                 <div className="col-lg-12">
                                     <div className="section-title text-center pb--30">
                                         <h2 className="title theme-gradient">อัพเดทสถานการณ์ COVID-19</h2>
-                                        <p>อัพเดทขัอมูลล่าสุด : {todayCovid.UpdateDate} </p>
-                                        <p>ที่มา : กรมควบคุมโรค กระทรวงสาธารณสุข</p>
+                                        <p>อัพเดทขัอมูลล่าสุด : {dayjs(todayCovid.updated).locale('th').format('DD MMMM YYYY HH:mm:ss')} </p>
+                                        {/* <p>ที่มา : กรมควบคุมโรค กระทรวงสาธารณสุข</p> */}
                                     </div>
                                 </div>
 
