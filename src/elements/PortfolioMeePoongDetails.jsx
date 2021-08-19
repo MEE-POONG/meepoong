@@ -88,7 +88,8 @@ class PortfolioMeePoongDetails extends Component {
                                                         <h4 className="title">ที่อยู่ที่ติดต่อ</h4>
                                                         <p className="description mt--30">เลขที่ 46/3 ถนนราชนิกูล ตำบลในเมือง อำเภอเมืองนครราชสีมา จังหวัดนครราชสีมา 30000</p>
                                                         <ul className="list-style--1">
-                                                            <li><a href="mailto: meepoonggroup@gmail.com"><FiMail /> meepoonggroup@gmail.com</a>, <a href="mailto: contact@meepoong.com"> contact@meepoong.com</a></li>
+                                                            <li><a href="mailto: meepoonggroup@gmail.com"><FiMail /> meepoonggroup@gmail.com</a></li>
+                                                            <li><a href="mailto: contact@meepoong"><FiMail /> contact@meepoong</a></li>
                                                             <li><a href="tel:+6682-216-3528"><FiPhone /> 082-216-3528</a>, <a href="tel:+6662-341-3535">062-341-3535</a>, <a href="tel:+6663-082-8384">063-082-8384</a></li>
                                                             <li><a href="https://fb.com/meepoong"><FaFacebookF /> Mee Poong Group - รับทำเว็บไซต์ กราฟิกดีไซน์ </a></li>
                                                             <li><FiClock /> วันจันทร์ - วันศุกร์ เวลา 09:30 น. - 18:30 น.</li>
