@@ -129,11 +129,12 @@ class Demo extends Component {
                         </div>
                         <div className="header-right">
                             <nav className="mainmenunav d-lg-block">
-                                <Scrollspy className="mainmenu" items={['covid-19', 'who-are-we', 'mission', 'brand-top-clients', 'team', 'testimonial', 'blog', 'contact']} currentClassName="is-current" offset={-200}>
+                                <Scrollspy className="mainmenu" items={['covid-19', 'who-are-we', 'mission', 'brand-top-clients', 'portfolio']} currentClassName="is-current" offset={-200}>
                                     <li><a href="#covid-19">Covid 19</a></li>
                                     <li><a href="#who-are-we">WHO ARE WE</a></li>
                                     <li><a href="#mission">MISSION</a></li>
                                     <li><a href="#brand-top-clients">BRAND</a></li>
+                                    <li><a href="/portfolio">เกี่ยวกับเรา</a></li>
                                 </Scrollspy>
                             </nav>
 

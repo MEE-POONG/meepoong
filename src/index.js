@@ -40,6 +40,7 @@ import Demo from './page-demo/Demo';
 // import About from "./elements/About";
 // import Contact from "./elements/Contact";
 // import PortfolioDetails from "./elements/PortfolioDetails";
+import PortfolioMeePoongDetails from "./elements/PortfolioMeePoongDetails";
 // import Blog from "./elements/Blog";
 // import BlogDetails from "./elements/BlogDetails";
 import error404 from "./elements/error404";
@@ -61,16 +62,17 @@ import error404 from "./elements/error404";
 // import Button from "./blocks/Button";
 
 
-import { BrowserRouter, Switch, Route  } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
 
-class Root extends Component{
-    render(){
-        return(
+class Root extends Component {
+    render() {
+        return (
             <BrowserRouter basename={'/'}>
                 <PageScrollTop>
                     <Switch>
-                        <Route exact path={`${process.env.PUBLIC_URL}/`} component={Demo}/>
+                        <Route exact path={`${process.env.PUBLIC_URL}/`} component={Demo} />
+                        <Route exact path={`${process.env.PUBLIC_URL}/portfolio`} component={PortfolioMeePoongDetails} />
                         {/* <Route exact path={`${process.env.PUBLIC_URL}/main-demo`} component={MainDemo}/>
                         <Route exact path={`${process.env.PUBLIC_URL}/dark-main-demo`} component={DarkMainDemo}/>
                         <Route exact path={`${process.env.PUBLIC_URL}/startup`} component={Startup}/>
@@ -116,12 +118,12 @@ class Root extends Component{
                         <Route exact path={`${process.env.PUBLIC_URL}/google-map`} component={GoogleMap}/>
                         <Route exact path={`${process.env.PUBLIC_URL}/columns`} component={Columns}/>
                         <Route exact path={`${process.env.PUBLIC_URL}/pricing-table`} component={PricingTable}/> */}
-                        
 
 
-                        
-                        <Route path={`${process.env.PUBLIC_URL}/404`} component={error404}/>
-                        <Route component={error404}/>
+
+
+                        <Route path={`${process.env.PUBLIC_URL}/404`} component={error404} />
+                        <Route component={error404} />
 
                     </Switch>
                 </PageScrollTop>
@@ -130,5 +132,5 @@ class Root extends Component{
     }
 }
 
-ReactDOM.render(<Root/>, document.getElementById('root'));
+ReactDOM.render(<Root />, document.getElementById('root'));
 serviceWorker.register();
