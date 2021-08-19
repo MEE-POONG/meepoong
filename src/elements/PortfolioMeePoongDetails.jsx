@@ -27,7 +27,7 @@ class PortfolioMeePoongDetails extends Component {
     render() {
         return (
             <React.Fragment>
-                <PageHelmet pageTitle='Portfolio Details' />
+                <PageHelmet pageTitle='COMPANY PROFILE' />
 
                 <Header headertransparent="header--transparent" colorblack="color--black" logoname="logo.png" />
 
