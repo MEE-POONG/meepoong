@@ -193,6 +193,43 @@ class PortfolioMeePoongDetails extends Component {
                 </div>
                 {/* End Related Work */}
 
+
+                {/* Start Contact Map  */}
+                <div className="rn-contact-map-wrapper ptb--120 bg_color--5">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-lg-12">
+                                <div className="section-title text-center mb--50">
+                                    <span className="subtitle">Office Location</span>
+                                    <h2 className="title">Our Office Location</h2>
+                                    {/* <p className="description">There are many variations of passages of Lorem Ipsum available, <br /> but the majority have suffered alteration.</p> */}
+                                </div>
+                            </div>
+                            {/* Start Single Map  */}
+                            <div className="col-lg-12 mt_md--30 mt_sm--30">
+                                <div className="rn-contact-map-area position-relative">
+                                    <div style={{ height: '400px', width: '100%' }}>
+                                        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d41637.865573848605!2d102.13279929822617!3d14.972775562611094!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x4326308b70cedb44!2sMEE%20POONG%20DEVELOPMENT!5e0!3m2!1sth!2sth!4v1629399401659!5m2!1sth!2sth" width="100%" height="450" Style="border:0;" allowfullscreen="" loading="lazy" title="MEE POONG MAP" />
+                                        {/* <GoogleMapReact
+                                                defaultCenter={this.props.center}
+                                                defaultZoom={this.props.zoom}
+                                                yesIWantToUseGoogleMapApiInternals
+                                            >
+                                                <AnyReactComponent
+                                                    lat={14.9727756}
+                                                    lng={102.1327993}
+                                                    text="My Marker"
+                                                />
+                                            </GoogleMapReact> */}
+                                    </div>
+                                </div>
+                            </div>
+                            {/* End Single Map  */}
+                        </div>
+                    </div>
+                </div>
+                {/* End Contact Map  */}
+
                 {/* Start Back To Top */}
                 <div className="backto-top">
                     <ScrollToTop showUnder={160}>
