@@ -1,31 +1,10 @@
 import React, { Component } from "react";
 import ScrollToTop from 'react-scroll-up';
-// import Particles from 'react-particles-js';
-// import {
-//     FaReact,
-//     FaSass
-// } from "react-icons/fa";
 import {
-    // FiSmartphone,
-    // FiCode,
-    // FiDownload,
-    // FiCommand,
-    // FiHeadphones,
-    // FiBold,
     FiChevronUp
 } from "react-icons/fi";
-// import {
-//     Accordion,
-//     AccordionItem,
-//     AccordionItemHeading,
-//     AccordionItemPanel,
-//     AccordionItemButton,
-// } from 'react-accessible-accordion';
 // Demo styles, see 'Styles' section below for some notes on use.
-import 'react-accessible-accordion/dist/fancy-example.css';
-// import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import { FiActivity, FiCast, FiMap } from "react-icons/fi";
-// import { Link } from 'react-router-dom';
 import { FiX, FiMenu } from "react-icons/fi";
 import { MdPersonAdd } from "react-icons/md";
 import { GiHomeGarage } from "react-icons/gi";
@@ -36,7 +15,9 @@ import { RiPlantFill } from "react-icons/ri";
 import SkilledTeam from "../elements/SkilledTeam";
 import dayjs from "dayjs";
 import 'dayjs/locale/th'
+import Scrollspy from 'react-scrollspy';
 
+import Slider from "react-slick";
 
 const ServiceList = [
     {
@@ -55,391 +36,6 @@ const ServiceList = [
         description: <p>โฟกัสที่การเติบโตของธุรกิจโดยเฉพาะ</p>
     },
 ]
-
-
-// const featureList = [
-//     {
-//         icon: <FaReact />,
-//         title: 'Latest React 16.8+',
-//         subtitle: 'We used latest react vertion ^16.8.6.Its a awesome design made by react.'
-//     },
-//     {
-//         icon: <FiSmartphone />,
-//         title: 'Perfect Responsive',
-//         subtitle: 'Our Template is full Perfect for all device. You can visit our template all device easily.'
-//     },
-//     {
-//         icon: <FiCode />,
-//         title: 'Well Documented Codes',
-//         subtitle: 'The MEE POONG code is awesome well documented code. And Its customization is very easily'
-//     },
-//     {
-//         icon: <FaSass />,
-//         title: 'Sass Available',
-//         subtitle: 'The tamplate has Sass available for css. You can Change css by sass'
-//     },
-//     {
-//         icon: <FiDownload />,
-//         title: 'Fast Loading Speed',
-//         subtitle: 'MEE POONG is faster loading speed.MEE POONG create your theme so much faster '
-//     },
-//     {
-//         icon: <FiCommand />,
-//         title: 'Modern Design',
-//         subtitle: 'MEE POONG is a modern creatuve design for Creative Agency , Personal Portfolio etc....'
-//     },
-//     {
-//         icon: <FiHeadphones />,
-//         title: '24 Support System',
-//         subtitle: 'We are provide 24 hours support for all clients.You can purchase without hesitation.'
-//     },
-//     {
-//         icon: <FiBold />,
-//         title: 'Bootstrap Comfortable',
-//         subtitle: 'Bootstrap comfortable is available in MEE POONG. So layout changes is so much easily'
-//     }
-// ]
-
-
-// const singleDemo = [
-//     {
-//         url: 'main-demo',
-//         imageUrl: 'demo-home.png',
-//         title: 'Main Demo',
-//         label: ''
-//     },
-//     {
-//         url: 'dark-main-demo',
-//         imageUrl: 'dark-main-demo.png',
-//         title: 'Main Demo — Dark Version',
-//         label: ''
-//     },
-//     {
-//         url: 'personal-portfolio',
-//         imageUrl: 'personal-portfolio.png',
-//         title: 'Personal Portfolio',
-//         label: 'Hot'
-//     },
-//     {
-//         url: 'interior-landing',
-//         imageUrl: 'interior-design.png',
-//         title: 'Interior Design',
-//         label: 'Hot'
-//     },
-//     {
-//         url: 'dark-portfolio-landing',
-//         imageUrl: 'dark-personal-portfolio-landing.png',
-//         title: 'Personal Portfolio 02 — One Page',
-//         label: ''
-//     },
-//     {
-//         url: 'portfolio-home',
-//         imageUrl: 'portfolio-home.png',
-//         title: 'Minimal Portfolio',
-//         label: ''
-//     },
-//     {
-//         url: 'digital-agency',
-//         imageUrl: 'digital-agency.png',
-//         title: 'Digital Agency',
-//         label: ''
-//     },
-//     {
-//         url: 'creative-agency',
-//         imageUrl: 'creative-agency.png',
-//         title: 'Creative Agency',
-//         label: ''
-//     },
-//     {
-//         url: 'corporate-business',
-//         imageUrl: 'corporate-business.png',
-//         title: 'Corporate Business',
-//         label: ''
-//     },
-//     {
-//         url: 'portfolio-landing',
-//         imageUrl: 'personal-portfolio-landing.png',
-//         title: 'Personal Portfolio — One Page',
-//         label: 'Hot'
-//     },
-
-//     {
-//         url: 'creative-landing',
-//         imageUrl: 'creative-landing.png',
-//         title: 'Creative Agency 02 — One Page',
-//         label: ''
-//     },
-//     {
-//         url: 'business',
-//         imageUrl: 'business.png',
-//         title: 'Business',
-//         label: ''
-//     },
-//     {
-//         url: 'designer-portfolio',
-//         imageUrl: 'designer-portfolio.png',
-//         title: 'Designer Portfolio',
-//         label: ''
-//     },
-//     {
-//         url: 'home-particles',
-//         imageUrl: 'homeparticles.png',
-//         title: 'Home Particle — Landing Page',
-//         label: ''
-//     },
-//     {
-//         url: 'studio-agency',
-//         imageUrl: 'studio-agency.png',
-//         title: 'Studio Agency',
-//         label: ''
-
-//     },
-//     {
-//         url: 'startup',
-//         imageUrl: 'startup.png',
-//         title: 'Startup',
-//         label: ''
-//     },
-//     {
-//         url: 'creative-portfolio',
-//         imageUrl: 'creative-portfolio.png',
-//         title: 'Creative Portfolio',
-//         label: ''
-//     },
-//     {
-//         url: '#comingsoon',
-//         imageUrl: 'coming-soon.png',
-//         title: 'Coming Soon',
-//         label: ''
-//     }
-// ]
-
-// const agencyDemo = [
-//     {
-//         url: 'main-demo',
-//         imageUrl: 'demo-home.png',
-//         title: 'Main Demo',
-//         label: ''
-//     },
-//     {
-//         url: 'creative-agency',
-//         imageUrl: 'creative-agency.png',
-//         title: 'Creative Agency',
-//         label: ''
-//     },
-//     {
-//         url: 'corporate-business',
-//         imageUrl: 'corporate-business.png',
-//         title: 'Corporate Business',
-//         label: ''
-//     },
-//     {
-//         url: 'home-particles',
-//         imageUrl: 'homeparticles.png',
-//         title: 'Home Particle — Landing Page',
-//         label: ''
-//     },
-//     {
-//         url: 'digital-agency',
-//         imageUrl: 'digital-agency.png',
-//         title: 'Digital Agency',
-//         label: ''
-//     },
-//     {
-//         url: 'creative-portfolio',
-//         imageUrl: 'creative-portfolio.png',
-//         title: 'Creative Portfolio',
-//         label: ''
-//     },
-//     {
-//         url: 'studio-agency',
-//         imageUrl: 'studio-agency.png',
-//         title: 'Studio Agency',
-//         label: ''
-//     },
-//     {
-//         url: 'dark-main-demo',
-//         imageUrl: 'dark-main-demo.png',
-//         title: 'Main Demo — Dark Version',
-//         label: ''
-//     },
-//     {
-//         url: 'creative-landing',
-//         imageUrl: 'creative-landing.png',
-//         title: 'Creative Agency 02 — One Page',
-//         label: ''
-//     },
-//     {
-//         url: 'interior-landing',
-//         imageUrl: 'interior-design.png',
-//         title: 'Interior Design',
-//         label: 'Hot'
-//     }
-
-// ]
-
-// const busenessDemo = [
-//     {
-//         url: 'business',
-//         imageUrl: 'business.png',
-//         title: 'Business',
-//         label: ''
-//     },
-//     {
-//         url: 'startup',
-//         imageUrl: 'startup.png',
-//         title: 'Startup',
-//         label: ''
-//     },
-//     {
-//         url: 'corporate-business',
-//         imageUrl: 'corporate-business.png',
-//         title: 'Corporate Business',
-//         label: 'Hot'
-//     },
-//     {
-//         url: 'creative-portfolio',
-//         imageUrl: 'creative-portfolio.png',
-//         title: 'Creative Portfolio',
-//         label: 'New'
-//     },
-//     {
-//         url: 'home-particles',
-//         imageUrl: 'homeparticles.png',
-//         title: 'Home Particle — Landing Page',
-//         label: ''
-//     },
-//     {
-//         url: 'studio-agency',
-//         imageUrl: 'studio-agency.png',
-//         title: 'Studio Agency',
-//         label: ''
-//     },
-
-// ]
-
-// const portfolioList = [
-//     {
-//         url: 'personal-portfolio',
-//         imageUrl: 'personal-portfolio.png',
-//         title: 'Personal Portfolio',
-//         label: 'Hot'
-//     },
-//     {
-//         url: 'dark-portfolio-landing',
-//         imageUrl: 'dark-personal-portfolio-landing.png',
-//         title: 'Personal Portfolio 02 — One Page',
-//         label: ''
-//     },
-//     {
-//         url: 'designer-portfolio',
-//         imageUrl: 'designer-portfolio.png',
-//         title: 'Designer Portfolio',
-//         label: ''
-//     },
-
-//     {
-//         url: 'creative-portfolio',
-//         imageUrl: 'creative-portfolio.png',
-//         title: 'Creative Portfolio',
-//         label: ''
-//     },
-//     {
-//         url: 'portfolio-home',
-//         imageUrl: 'portfolio-home.png',
-//         title: 'Minimal Portfolio',
-//         label: ''
-//     },
-//     {
-//         url: 'portfolio-landing',
-//         imageUrl: 'personal-portfolio-landing.png',
-//         title: 'Personal Portfolio — One Page',
-//         label: 'Hot'
-//     },
-// ]
-
-// const landingPage = [
-//     {
-//         url: 'dark-portfolio-landing',
-//         imageUrl: 'dark-personal-portfolio-landing.png',
-//         title: 'Personal Portfolio 02 — One Page',
-//         label: ''
-//     },
-//     {
-//         url: 'portfolio-landing',
-//         imageUrl: 'personal-portfolio-landing.png',
-//         title: 'Personal Portfolio — One Page',
-//         label: 'Hot'
-//     },
-//     {
-//         url: 'creative-landing',
-//         imageUrl: 'creative-landing.png',
-//         title: 'Creative Agency 02 — One Page',
-//         label: ''
-//     },
-//     {
-//         url: 'interior-landing',
-//         imageUrl: 'interior-design.png',
-//         title: 'Interior Design',
-//         label: 'Hot'
-//     },
-//     {
-//         url: 'home-particles',
-//         imageUrl: 'homeparticles.png',
-//         title: 'Home Particle — Landing Page',
-//         label: ''
-//     },
-// ]
-
-// const innerDemo = [
-//     {
-//         url: 'service',
-//         imageUrl: 'service.png',
-//         title: 'Service',
-//     },
-//     {
-//         url: 'service-details',
-//         imageUrl: 'service-details.png',
-//         title: 'Service Details',
-//     },
-//     {
-//         url: 'about',
-//         imageUrl: 'about.png',
-//         title: 'About',
-//     },
-//     {
-//         url: 'blog',
-//         imageUrl: 'blog-list.png',
-//         title: 'Blog List',
-//     },
-//     {
-//         url: 'blog-details',
-//         imageUrl: 'blog-details.png',
-//         title: 'Blog Details',
-//     },
-//     {
-//         url: 'portfolio',
-//         imageUrl: 'portfolio.png',
-//         title: 'Portfolio',
-//     },
-//     {
-//         url: 'portfolio-details',
-//         imageUrl: 'portfolio-details.png',
-//         title: 'Portfolio Details',
-//     },
-
-//     {
-//         url: 'video-popup',
-//         imageUrl: 'video-popup.png',
-//         title: 'Video popup',
-//     },
-//     {
-//         url: 'contact',
-//         imageUrl: 'contact.png',
-//         title: 'Contact',
-//     },
-
-// ]
 
 class Demo extends Component {
     constructor(props) {
@@ -460,9 +56,10 @@ class Demo extends Component {
         };
         this.menuTrigger = this.menuTrigger.bind(this);
         this.CLoseMenuTrigger = this.CLoseMenuTrigger.bind(this);
+        this.stickyHeader = this.stickyHeader.bind(this);
         //  this.subMetuTrigger = this.subMetuTrigger.bind(this);
         window.addEventListener('load', function () {
-            console.log('All assets are loaded')
+            console.log('All assets are loaded');
         })
         fetch("https://corona.lmao.ninja/v2/countries/TH").then(e => e.json()).then(e => {
             this.setState({ todayCovid: e })
@@ -479,6 +76,7 @@ class Demo extends Component {
         return num.toFixed(0).replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1,')
     }
 
+    stickyHeader() { }
     render() {
         const { todayCovid } = this.state;
         const { currencyFormat } = this;
@@ -531,17 +129,12 @@ class Demo extends Component {
                         </div>
                         <div className="header-right">
                             <nav className="mainmenunav d-lg-block">
-                                <ul className="mainmenu">
+                                <Scrollspy className="mainmenu" items={['covid-19', 'who-are-we', 'mission', 'brand-top-clients', 'team', 'testimonial', 'blog', 'contact']} currentClassName="is-current" offset={-200}>
                                     <li><a href="#covid-19">Covid 19</a></li>
                                     <li><a href="#who-are-we">WHO ARE WE</a></li>
                                     <li><a href="#mission">MISSION</a></li>
                                     <li><a href="#brand-top-clients">BRAND</a></li>
-                                    {/* <li><a href="#demo">View Demo</a></li> */}
-                                    {/* <li><a href="#feature">Feature</a></li> */}
-                                    {/* <li><a href="#faq">FAQ</a></li> */}
-                                    {/* <li><a href="http://rainbowit.net/docs/MEE POONG/">Documentation</a></li> */}
-                                    {/* <li><a href="https://support.rainbowit.net/support/">Friendly Support</a> </li> */}
-                                </ul>
+                                </Scrollspy>
                             </nav>
 
                             <div className="header-btn">
@@ -986,6 +579,8 @@ class Demo extends Component {
                         </div>
                     </footer>
                     {/* End Footer Area  */}
+
+                    <Slider></Slider>
 
                 </div>
                 {/* End Preview Main Wrapper */}
