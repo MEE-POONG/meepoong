@@ -33,19 +33,7 @@ class Header extends Component {
             }
         }
 
-        const { logo, color = 'default-color' } = this.props;
-        let logoUrl;
-        if (logo === 'light') {
-            logoUrl = <img src="/assets/images/logo/logo.png" alt="Digital Agency" />;
-        } else if (logo === 'dark') {
-            logoUrl = <img src="/assets/images/logo/logo-dark.png" alt="Digital Agency" />;
-        } else if (logo === 'symbol-dark') {
-            logoUrl = <img src="/assets/images/logo/logo-symbol-dark.png" alt="Digital Agency" />;
-        } else if (logo === 'symbol-light') {
-            logoUrl = <img src="/assets/images/logo/logo-symbol-light.png" alt="Digital Agency" />;
-        } else {
-            logoUrl = <img src="/assets/images/logo/logo.png" className="shadow-logo" alt="Digital Agency" />;
-        }
+        const { color = 'default-color' } = this.props;
 
         return (
             <header className={`header-area header--fixed formobile-menu header--transparent ${color}`}>
