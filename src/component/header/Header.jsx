@@ -70,8 +70,8 @@ class Header extends Component {
                             </Scrollspy>
                         </nav>
                         <div className="header-btn">
-                            <a className="btn-default btn-border btn-opacity" href="https://themeforest.net/checkout/from_item/31405042?license=regular">
-                                <span>Buy Now</span>
+                            <a className="btn-default" rel="noopener noreferrer" target="_blank" href="https://www.facebook.com/meepoong">
+                                <span>ติดต่อเรา</span>
                             </a>
                         </div>
                         {/* Start Humberger Menu  */}
