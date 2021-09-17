@@ -32,20 +32,31 @@ const BackendForm = () => {
   //   });
 
   // }, [])
-  const handleAddUser = (e) => {
+  const handleAddUser = async (e) => {
     e.preventDefault();
-    blogsRef.push({
+    await blogsRef.push({
       title,
       message,
       image
     })
+
+    const uploadTask = await blogStorageRef.child(imageFile.name).put(imageFile, { contentType: imageFile.type });
+
+    await uploadTask.on('state_changed', (snapshot) => {
+      console.log(snapshot.bytesTransferred / snapshot.totalBytes * 100 + '%');
+    });
+
+    await uploadTask.then((snapshot) => {
+      blogsRef.child('images').push(snapshot.downloadURL);
+    });
+
     history.push('blog')
   }
 
   const handleFileSubmit = (event) => {
     console.log(event.target.files[0]);
     const file = event.target.files[0];
-    setImageFile(URL.createObjectURL(file))
+    setImageFile(file)
     setImage(file.name)
     const uploadTask = blogStorageRef.child(file.name).put(file, { contentType: file.type });
 
@@ -144,7 +155,7 @@ const BackendForm = () => {
                         <div className="App-images">
                           <img
                             className="App-image"
-                            src={imageFile}
+                            src={URL.createObjectURL(imageFile)}
                             alt=""
                           />
                         </div>
