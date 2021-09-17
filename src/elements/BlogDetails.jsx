@@ -1,6 +1,5 @@
-import React, { Component } from "react";
+import React from "react";
 import PageHelmet from "../component/common/Helmet";
-import ModalVideo from "react-modal-video";
 // import { FiClock, FiUser, FiMessageCircle, FiHeart } from "react-icons/fi";
 // import { Link } from "react-router-dom";
 import ScrollToTop from "react-scroll-up";
@@ -14,7 +13,7 @@ const BlogDetails = () => {
   const PostList = BlogContent.slice(0, 6);
   const Title = "Title News";
   const { id } = useParams();
-  const postdetail = PostList.find((e) => (+e.id == id));
+  const postdetail = PostList.find((e) => (+e.id === id));
   console.log(id);
   console.log(postdetail);
   return (

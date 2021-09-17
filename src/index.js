@@ -77,7 +77,7 @@ class Root extends Component {
                         <Route exact path={`${process.env.PUBLIC_URL}/portfolio`} component={PortfolioMeePoongDetails} />
                         <Route exact path={`${process.env.PUBLIC_URL}/blog`} component={Blog}/>
                         <Route exact path={`${process.env.PUBLIC_URL}/blog-details/:id`} component={BlogDetails}/> 
-                        {/* <Route exact path={`${process.env.PUBLIC_URL}/backend`} component={backend}/> */}
+                        <Route exact path={`${process.env.PUBLIC_URL}/backend`} component={backend}/>
                         {/* <Route exact path={`${process.env.PUBLIC_URL}/main-demo`} component={MainDemo}/>
                         <Route exact path={`${process.env.PUBLIC_URL}/dark-main-demo`} component={DarkMainDemo}/>
                         <Route exact path={`${process.env.PUBLIC_URL}/startup`} component={Startup}/>
