@@ -27,15 +27,15 @@ class BackendForm extends Component {
     const [rnMessage, setrnMessage] = useState("");
 
     const handleAddUser = () => {
-          const firestore = []
-          let data ={
-            Name:rnName,
-            Img:rnImg,
-            Message:rnMessage,
-          }
-          firestore.push(data);
-          const ss = TutorialDataService.getAll()
-          console.log(ss);
+          // const firestore = []
+          // let data ={
+          //   Name:rnName,
+          //   Img:rnImg,
+          //   Message:rnMessage,
+          // }
+          // firestore.push(data);
+          // const ss = TutorialDataService.getAll()
+          // console.log(ss);
       
     }
     return (

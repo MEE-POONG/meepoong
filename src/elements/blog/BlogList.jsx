@@ -12,7 +12,7 @@ class BLogList extends Component {
             <div className="col-lg-4 col-md-6 col-sm-12 col-12 mt--30" key={i}>
               <div className="im_box">
                 <div className="thumbnail">
-                  <Link to="/blog-details">
+                  <Link to={`/blog-details/${value.id}`}>
                     <img
                       className="w-100"
                       src={`/assets/images/blog/blog-${value.images}.jpg`}
@@ -24,19 +24,19 @@ class BLogList extends Component {
                   <div className="inner">
                     <div className="content_heading">
                       <div className="category_list">
-                        <Link to="/portfolio-details">{value.category}</Link>
+                      <Link to={`/blog-details/${value.id}`}>{value.category}</Link>
                       </div>
                       <h4 className="title">
-                        <Link to="/blog-details">{value.title}</Link>
+                      <Link to={`/blog-details/${value.id}`}>{value.title}</Link>
                       </h4>
                     </div>
                     <div className="content_footer">
-                      <Link to="/blog-details" className="rn-btn btn-opacity">
+                    <Link to={`/blog-details/${value.id}`} className="rn-btn btn-opacity">
                         Read More
                       </Link>
                     </div>
                   </div>
-                  <Link className="transparent_link" to="/blog-details"></Link>
+                  <Link className="transparent_link"to={`/blog-details/${value.id}`}></Link>
                 </div>
               </div>
             </div>
