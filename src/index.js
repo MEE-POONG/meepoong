@@ -41,7 +41,7 @@ import Demo from './page-demo/Demo';
 // import Contact from "./elements/Contact";
 // import PortfolioDetails from "./elements/PortfolioDetails";
 import PortfolioMeePoongDetails from "./elements/PortfolioMeePoongDetails";
-// import Blog from "./elements/Blog";
+// import BLogList from "./elements/blog/BLogList";
 // import BlogDetails from "./elements/BlogDetails";
 import error404 from "./elements/error404";
 
@@ -64,6 +64,8 @@ import error404 from "./elements/error404";
 
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import * as serviceWorker from './serviceWorker';
+import backend from './elements/blog/backend';
+import Blog from "./elements/Blog";
 
 class Root extends Component {
     render() {
@@ -73,24 +75,12 @@ class Root extends Component {
                     <Switch>
                         <Route exact path={`${process.env.PUBLIC_URL}/`} component={Demo} />
                         <Route exact path={`${process.env.PUBLIC_URL}/portfolio`} component={PortfolioMeePoongDetails} />
+                        <Route exact path={`${process.env.PUBLIC_URL}/blog`} component={Blog}/>
+                        <Route exact path={`${process.env.PUBLIC_URL}/backend`} component={backend}/>
                         {/* <Route exact path={`${process.env.PUBLIC_URL}/main-demo`} component={MainDemo}/>
                         <Route exact path={`${process.env.PUBLIC_URL}/dark-main-demo`} component={DarkMainDemo}/>
                         <Route exact path={`${process.env.PUBLIC_URL}/startup`} component={Startup}/>
                         <Route exact path={`${process.env.PUBLIC_URL}/paralax`} component={Paralax}/>
-
-                        <Route exact path={`${process.env.PUBLIC_URL}/digital-agency`} component={DigitalAgency}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/creative-agency`} component={CreativeAgency}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/personal-portfolio`} component={PersonalPortfolio}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/studio-agency`} component={StudioAgency}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/business`} component={Business}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/portfolio-home`} component={HomePortfolio}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/portfolio-landing`} component={PortfolioLanding}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/creative-landing`} component={CreativeLanding}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/home-particles`} component={HomeParticles}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/dark-portfolio-landing`} component={DarkPortfolioLanding}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/designer-portfolio`} component={DesignerPortfolio}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/creative-portfolio`} component={CreativePortfolio}/>
-                        <Route exact path={`${process.env.PUBLIC_URL}/interior-landing`} component={InteriorLanding}/>
                         <Route exact path={`${process.env.PUBLIC_URL}/corporate-business`} component={CorporateBusiness}/> */}
 
 

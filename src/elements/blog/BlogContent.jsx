@@ -6,7 +6,7 @@ const BlogContent = [
     },
     {
         images: '02',
-        title: 'A big ticket gone to be an interesting look New York.',
+        title: 'A big ticket gone to be an interesting look New York.', 
         category: 'React App'
     },
     {

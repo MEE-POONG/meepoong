@@ -54,6 +54,7 @@ class Header extends Component {
                                 <li><a href="/#who-are-we">WHO ARE WE</a></li>
                                 <li><a href="/#mission">MISSION</a></li>
                                 <li><a href="/#brand-top-clients">BRAND</a></li>
+                                <li><a href="/BLogList">News</a></li>
                                 <li><a href="/portfolio">เกี่ยวกับเรา</a></li>
                             </Scrollspy>
                         </nav>

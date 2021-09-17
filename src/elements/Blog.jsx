@@ -16,7 +16,7 @@ class Blog extends Component{
 
                 <Header headertransparent="header--transparent" colorblack="color--black" logoname="logo.png" />
                 {/* Start Breadcrump Area */}
-                <Breadcrumb title={'Blog List'}   />
+                <Breadcrumb title={'MeePoong News'}   />
                 {/* End Breadcrump Area */}
 
 
@@ -24,7 +24,7 @@ class Blog extends Component{
                 <div className="rn-blog-area ptb--120 bg_color--1">
                     <div className="container">
                         <BlogList />
-                        <div className="row mt--60">
+                        <div className="row mt--50">
                             <div className="col-lg-12">
                                 {/* Start Pagination Area */}
                                 <Pagination />
@@ -43,7 +43,7 @@ class Blog extends Component{
                 </div>
                 {/* End Back To Top */}
                 
-                <Footer /> 
+           
 
             </React.Fragment>
         )
