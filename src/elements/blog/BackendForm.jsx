@@ -56,8 +56,10 @@ const BackendForm = () => {
   const handleFileSubmit = (event) => {
     console.log(event.target.files[0]);
     const file = event.target.files[0];
+    
     setImageFile(file)
     setImage(file.name)
+
     const uploadTask = blogStorageRef.child(file.name).put(file, { contentType: file.type });
 
     uploadTask.on('state_changed', (snapshot) => {

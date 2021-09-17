@@ -1,29 +1,29 @@
-import {tasksRef} from "../firebase";
+// // import {tasksRef} from "../firebase";
 
-// const db = firebase.ref("/tutorials");
-const db = []
+// // const db = firebase.ref("/tutorials");
+// const db = []
 
-class TutorialDataService {
-  getAll() {
-      console.log(tasksRef);
-    return db;
-  }
+// class TutorialDataService {
+//   getAll() {
+//       console.log(tasksRef);
+//     return db;
+//   }
 
-  create(tutorial) {
-    return db.push(tutorial);
-  }
+//   create(tutorial) {
+//     return db.push(tutorial);
+//   }
 
-  update(key, value) {
-    return db.child(key).update(value);
-  }
+//   update(key, value) {
+//     return db.child(key).update(value);
+//   }
 
-  delete(key) {
-    return db.child(key).remove();
-  }
+//   delete(key) {
+//     return db.child(key).remove();
+//   }
 
-  deleteAll() {
-    return db.remove();
-  }
-}
+//   deleteAll() {
+//     return db.remove();
+//   }
+// }
 
-export default new TutorialDataService();
+// export default new TutorialDataService();
