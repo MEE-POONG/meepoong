@@ -60,18 +60,15 @@ const BackendForm = () => {
   const [title, setTitle] = useState([])
   const [image, setImage] = useState(null)
   const [imageFile, setImageFile] = useState(null)
-  const [message, setMessage] = useState(null)
+  const [detail, setDetail] = useState(null)
   const [description, setDescription] = useState(null)
   const [sending, setSending] = useState('0%')
 
   const history = useHistory()
 
-  React.useEffect(() => {
-    console.log(message);
-  }, [message])
   const handleAddNews = async (e) => {
     e.preventDefault();
-    if (!title || !message || !image)
+    if (!title || !detail || !image || !description)
       return Swal.fire({
         title: 'ใส่ข้อมูลให้ครบนะจ๊ะ',
         width: 600,
@@ -89,7 +86,8 @@ const BackendForm = () => {
 
     const data = {
       title,
-      message,
+      detail,
+      description,
       image: null
     }
 
@@ -187,15 +185,15 @@ const BackendForm = () => {
                         />
                       </label>
 
-                      <label htmlFor="message">
+                      <label htmlFor="detail">
                         <h3>เนื้อหา</h3>
                         <Editor
-                          id="message"
-                          name="message"
+                          id="detail"
+                          name="detail"
                           placeholder="เนื้อหา"
                           cellPlugins={cellPlugins}
-                          value={message}
-                          onChange={setMessage} />
+                          value={detail}
+                          onChange={setDetail} />
                       </label>
                       <button
                         className="btn-default"
