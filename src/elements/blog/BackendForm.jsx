@@ -193,7 +193,8 @@ const BackendForm = () => {
                           placeholder="เนื้อหา"
                           cellPlugins={cellPlugins}
                           value={detail}
-                          onChange={setDetail} />
+                          onChange={setDetail}
+                        />
                       </label>
                       <button
                         className="btn-default"
