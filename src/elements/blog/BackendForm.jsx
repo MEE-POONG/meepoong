@@ -1,227 +1,222 @@
 import React, { useState } from "react";
 import { useHistory } from 'react-router-dom';
 
-import {
-  Accordion,
-  AccordionItem,
-  AccordionItemHeading,
-  AccordionItemPanel,
-  AccordionItemButton,
-} from "react-accessible-accordion";
-import { Button } from "react-bootstrap";
+import Swal from 'sweetalert2'
+
+import * as loadingData from "./loading.json";
+import * as successData from "./success.json";
+
+import FadeIn from "react-fade-in";
+import Lottie from "react-lottie";
 
 import { database, storage } from '../../firebase';
 
+import Editor from '@react-page/editor';
+
+// import the main css, uncomment this: (this is commented in the example because of https://github.com/vercel/next.js/issues/19717)
+import '@react-page/editor/lib/index.css';
+
+// The rich text area plugin
+import slate from '@react-page/plugins-slate';
+// image
+import image from '@react-page/plugins-image';
+
+// Stylesheets for the rich text area plugin
+// uncomment this
+import '@react-page/plugins-slate/lib/index.css';
+
+// Stylesheets for the imagea plugin
+import '@react-page/plugins-image/lib/index.css';
+
+// Define which plugins we want to use.
+const cellPlugins = [slate(), image];
+
+const defaultOptions = {
+  loop: true,
+  autoplay: true,
+  animationData: loadingData.default,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice"
+  }
+};
+
+const defaultOptions2 = {
+  loop: true,
+  autoplay: true,
+  animationData: successData.default,
+  rendererSettings: {
+    preserveAspectRatio: "xMidYMid slice"
+  }
+};
 
 const BackendForm = () => {
+
+  const [loading, setLoading] = useState(true);
+  const [success, setSuccess] = useState(true);
+
   const blogsRef = database.ref('/blogs');
   const blogStorageRef = storage.ref('/blogs-files')
 
   const [title, setTitle] = useState([])
-  const [image, setImage] = useState([])
-  const [imageFile, setImageFile] = useState([])
-  const [message, setMessage] = useState([])
+  const [image, setImage] = useState(null)
+  const [imageFile, setImageFile] = useState(null)
+  const [message, setMessage] = useState(null)
+  const [description, setDescription] = useState(null)
+  const [sending, setSending] = useState('0%')
 
   const history = useHistory()
 
-  // useEffect(() => {
-
-  //   blogsRef.on('value', (snapshot) => {
-  //     const title = snapshot.val();
-  //     setTitle({ title });
-  //   });
-
-  // }, [])
-  const handleAddUser = async (e) => {
+  React.useEffect(() => {
+    console.log(message);
+  }, [message])
+  const handleAddNews = async (e) => {
     e.preventDefault();
-    await blogsRef.push({
+    if (!title || !message || !image)
+      return Swal.fire({
+        title: 'ใส่ข้อมูลให้ครบนะจ๊ะ',
+        width: 600,
+        padding: '3em',
+        background: '#fff url(/images/trees.png)',
+        backdrop: `
+          rgba(0,0,123,0.4)
+          url("/images/nyan-cat.gif")
+          left top
+          no-repeat
+        `
+      })
+    setLoading(false)
+    setSuccess(false)
+
+    const data = {
       title,
       message,
-      image
-    })
+      image: null
+    }
 
-    const uploadTask = await blogStorageRef.child(imageFile.name).put(imageFile, { contentType: imageFile.type });
+    if (imageFile) {
+      const uploadTask = blogStorageRef.child(imageFile.name).put(imageFile, { contentType: imageFile.type });
 
-    await uploadTask.on('state_changed', (snapshot) => {
-      console.log(snapshot.bytesTransferred / snapshot.totalBytes * 100 + '%');
-    });
+      uploadTask.on('state_changed', async (snapshot) => {
+        console.log(snapshot.bytesTransferred / snapshot.totalBytes * 100 + '%');
+        setSending(snapshot.bytesTransferred / snapshot.totalBytes * 100 + '%')
+      });
 
-    await uploadTask.then((snapshot) => {
-      blogsRef.child('images').push(snapshot.downloadURL);
-    });
 
-    history.push('blog')
+      uploadTask.then((snapshot) => {
+        blogsRef.push({ ...data, image: snapshot.downloadURL })
+        history.push('blog')
+      });
+
+    } else {
+      await blogsRef.push(data)
+      history.push('blog')
+    }
+
   }
 
   const handleFileSubmit = (event) => {
-    console.log(event.target.files[0]);
     const file = event.target.files[0];
-    
     setImageFile(file)
     setImage(file.name)
-
-    const uploadTask = blogStorageRef.child(file.name).put(file, { contentType: file.type });
-
-    uploadTask.on('state_changed', (snapshot) => {
-      console.log(snapshot.bytesTransferred / snapshot.totalBytes * 100 + '%');
-    });
-
-    uploadTask.then((snapshot) => {
-      blogsRef.child('images').push(snapshot.downloadURL);
-    });
   }
 
+  const showImage = () => imageFile ? URL.createObjectURL(imageFile) : 'https://i.stack.imgur.com/y9DpT.jpg'
   return (
-    <div className="contact-form--1 pt-5">
-      <div className="container">
-        <div className="row row--35">
-          <div className="col-lg-6 order-2 order-lg-1">
-            <div className="section-title text-left mb--50">
-              <span className="subtitle">Update News</span>
-              <h2 className="title">เพิ่มเลยเพิ่มเลยย</h2>
+    <>
+      {
+        !success ? (
+          <FadeIn>
+            <div style={{ display: "flex" }}>
+              <h1>publishing {sending}</h1>
+              {!loading ? (
+                <Lottie options={defaultOptions} height={140} width={140} />
+              ) : (
+                <Lottie options={defaultOptions2} height={140} width={140} />
+              )}
             </div>
-            <div className="form-wrapper">
-              <form>
-                <label htmlFor="item01">
-                  <input
-                    type="text"
-                    name="name"
-                    id="item01"
-                    value={title}
-                    onChange={(e) => {
-                      setTitle(e.target.value)
-                    }}
-                    placeholder="Title *"
-                  />
-                </label>
-
-                <label htmlFor="item02">
-                  <input
-                    type="text"
-                    name="email"
-                    id="item02"
-                    value={image}
-                    onChange={(e) => {
-                      setImage(e.target.value);
-                    }}
-                    placeholder="รูปภาพ *"
-                  />
-                </label>
-                <label htmlFor="item04">
-                  <textarea
-                    type="text"
-                    id="item04"
-                    name="message"
-                    value={message}
-                    onChange={(e) => {
-                      setMessage(e.target.value);
-                    }}
-                    placeholder="เนื้อหา"
-                  />
-                </label>
-                <button
-                  className="btn-default"
-                  type="submit"
-                  value="submit"
-                  name="submit"
-                  id="mc-embedded-subscribe"
-                  onClick={handleAddUser}
-                >
-                  Submit
-                </button>
-              </form>
-            </div>
-          </div>
-          <div className="col-lg-6 order-1 order-lg-2">
-            {/* Start Faq Area */}
-            <div id="faq" className="pv-feaq-area bg_color--5 ptb--120">
-              <div className="container">
-                <div className="row">
-                  <div className="col-lg-8 offset-lg-2">
-                    <div className="section-title text-left pb--30">
-                      <span className="subtitle theme-gradient">
-                        ข่าวทั้งหมด
-                      </span>
-                      <h2 className="title">ลบ/แก้ไข </h2>
-                    </div>
+          </FadeIn>
+        ) : ((
+          <div className="contact-form--1 pt-5">
+            <div className="container">
+              <div className="row row--35">
+                <div className="col-lg-12 order-2 order-lg-1">
+                  <div className="section-title text-left mb--50">
+                    <span className="subtitle">Update News</span>
+                    <h2 className="title">เพิ่มเลยเพิ่มเลยย</h2>
                   </div>
-                </div>
-                <div className="row">
-                  <div className="col-lg-8 offset-lg-2">
-                    <div className="faq-area">
+                  <div className="form-wrapper">
+                    <form>
+                      <center>
+                        <div className="AppBody col-lg-6">
+                          <div className="App-images">
+                            <img
+                              className="App-image"
+                              src={showImage()}
+                              alt=""
+                            />
+                          </div>
+                          <label htmlFor="file">
+                            <input id="file" type="file" class="file" data-preview-file-type="text" onChange={handleFileSubmit} />
+                          </label>
 
-                      <div className="AppBody">
-
-                        <input id="input-id" type="file" class="file" data-preview-file-type="text" onChange={handleFileSubmit} />
-
-                        <div className="App-images">
-                          <img
-                            className="App-image"
-                            src={URL.createObjectURL(imageFile)}
-                            alt=""
-                          />
                         </div>
-                      </div>
+                      </center>
+                      <label htmlFor="name">
+                        <input
+                          type="text"
+                          name="name"
+                          id="name"
+                          value={title}
+                          onChange={(e) => {
+                            setTitle(e.target.value)
+                          }}
+                          placeholder="หัวเรื่อง"
+                        />
+                      </label>
 
-                      <Accordion
-                        className="accodion-style--1"
-                        preExpanded={"0"}
+                      <label htmlFor="description">
+                        <textarea
+                          type="text"
+                          id="description"
+                          name="description"
+                          value={description}
+                          onChange={(e) => {
+                            setDescription(e.target.value);
+                          }}
+                          placeholder="รายละเอียด"
+                        />
+                      </label>
+
+                      <label htmlFor="message">
+                        <h3>เนื้อหา</h3>
+                        <Editor
+                          id="message"
+                          name="message"
+                          placeholder="เนื้อหา"
+                          cellPlugins={cellPlugins}
+                          value={message}
+                          onChange={setMessage} />
+                      </label>
+                      <button
+                        className="btn-default"
+                        type="submit"
+                        value="submit"
+                        name="submit"
+                        id="mc-embedded-subscribe"
+                        onClick={handleAddNews}
                       >
-                        <AccordionItem>
-                          <AccordionItemHeading>
-                            <AccordionItemButton>
-                              หัวข้อข่าว
-                            </AccordionItemButton>
-                          </AccordionItemHeading>
-                          <AccordionItemPanel>
-                            <p>
-                              Welcome to Imroz React Creative Agency, React
-                              Portfolio and Corporate Multi Purpose Template
-                              Built With React JS. NO jQuery!. It works too
-                              much faster loading speed and you can works too
-                              much comfortability.Imroz create your website so
-                              much faster, use to use and Well Documented
-                              Codes for your customization.
-                            </p>
-                            <Button className="btn-default">แก้ไข</Button>
-                            <Button className="btn-default btn-dark">
-                              ลบ
-                            </Button>
-                          </AccordionItemPanel>
-                        </AccordionItem>
-                        <AccordionItem>
-                          <AccordionItemHeading>
-                            <AccordionItemButton>
-                              หัวข้อข่าว
-                            </AccordionItemButton>
-                          </AccordionItemHeading>
-                          <AccordionItemPanel>
-                            <p>
-                              Welcome to Imroz React Creative Agency, React
-                              Portfolio and Corporate Multi Purpose Template
-                              Built With React JS. NO jQuery!. It works too
-                              much faster loading speed and you can works too
-                              much comfortability.Imroz create your website so
-                              much faster, use to use and Well Documented
-                              Codes for your customization.
-                            </p>
-                            <Button className="btn-default">แก้ไข</Button>
-                            <Button className="btn-default btn-dark">
-                              ลบ
-                            </Button>
-                          </AccordionItemPanel>
-                        </AccordionItem>
-                      </Accordion>
-                    </div>
+                        Submit
+                      </button>
+                    </form>
                   </div>
                 </div>
               </div>
             </div>
-            {/* Start Faq Area */}
           </div>
-        </div>
-      </div>
-    </div>
+        )
+        )
+      }
+    </>
   );
 }
 export default BackendForm;
