@@ -33,7 +33,6 @@ import _ from 'lodash';
 //   }
 // };
 
-
 const BLogList = () => {
   const blogsRef = database.ref('/blogs');
   // const blogStorageRef = storage.ref('/blogs-files')
