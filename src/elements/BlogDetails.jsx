@@ -1,6 +1,6 @@
 import React from "react";
 import PageHelmet from "../component/common/Helmet";
-import { Helmet } from 'react-helmet'
+import MetaTags from 'react-meta-tags';
 
 // import { FiClock, FiUser, FiMessageCircle, FiHeart } from "react-icons/fi";
 // import { Link } from "react-router-dom";
@@ -66,7 +66,7 @@ const BlogDetails = () => {
   return (
     <React.Fragment>
       <PageHelmet pageTitle={`MEE POONG BLOG DETAIL - ${title}`} />
-      <Helmet>
+      <MetaTags>
         <title>{`MEE POONG BLOG DETAIL - ${title}`}</title>
 
         <meta property="og:title" content={`MEE POONG BLOG DETAIL - ${title}`} />
@@ -79,7 +79,7 @@ const BlogDetails = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta property="og:site_name" content={`MEE POONG BLOG DETAIL - ${title}`} />
         <meta name="twitter:image:alt" content={`MEE POONG BLOG DETAIL - ${title}`} />
-      </Helmet>
+      </MetaTags>
       <Header
         headertransparent="header--transparent"
         s
