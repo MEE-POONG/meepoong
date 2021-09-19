@@ -111,17 +111,17 @@ const BlogDetails = () => {
             <div className="col-lg-12">
               <div className="inner-wrapper">
                 <div className="inner">
-                  <div className=" text-center" >
+                  {/* <div className="thumbnaili text-center" >
                     <img
                       src={image}
                       alt={title}
                     />
-                  </div>
+                  </div> */}
                   <p className="mt--40"></p>
                   {/* <p>{postdetail.category}</p> */}
-                  <blockquote className="rn-blog-quote">
+                  {/* <blockquote className="rn-blog-quote">
                     {title}
-                  </blockquote>
+                  </blockquote> */}
 
                   <p className="mt--25 mt_sm--5">
                     <Editor
