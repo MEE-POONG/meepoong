@@ -8,6 +8,7 @@ import ScrollToTop from "react-scroll-up";
 import { FiChevronUp } from "react-icons/fi";
 import Header from "../component/header/Header";
 import Footer from "../component/footer/Footer";
+import { FacebookShareButton,FacebookIcon } from "react-share";
 
 import { useParams } from "react-router";
 
@@ -34,6 +35,7 @@ import '@react-page/plugins-slate/lib/index.css';
 import '@react-page/plugins-image/lib/index.css';
 
 // Define which plugins we want to use.
+
 const cellPlugins = [slate(), image];
 
 
@@ -44,6 +46,7 @@ const BlogDetails = () => {
   // const Title = "Title News";
   const { id } = useParams();
   const blogsRef = database.ref('/blogs/' + id);
+
 
 
 
@@ -135,6 +138,13 @@ const BlogDetails = () => {
                 </div>
               </div>
             </div>
+            <FacebookShareButton 
+                url={"www.meepoong.com/blog-details/"+id}
+                quote={title}
+                hashtag="#Meepoong"
+                >
+                 <FacebookIcon size={36} />
+              </FacebookShareButton>
           </div>
         </div>
       </div>
