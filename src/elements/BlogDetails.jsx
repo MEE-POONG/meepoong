@@ -8,8 +8,10 @@ import ScrollToTop from "react-scroll-up";
 import { FiChevronUp } from "react-icons/fi";
 import Header from "../component/header/Header";
 import Footer from "../component/footer/Footer";
-import { FacebookShareButton,FacebookIcon } from "react-share";
-
+import {
+  FacebookShareButton,
+  FacebookIcon,
+} from 'next-share';
 import { useParams } from "react-router";
 
 import {
