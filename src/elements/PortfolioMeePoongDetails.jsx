@@ -6,6 +6,8 @@ import { FiChevronUp, FiClock, FiPhone, FiShoppingBag } from "react-icons/fi";
 import Header from "../component/header/Header";
 import { FiMail } from "react-icons/fi";
 import { FaFacebookF } from "react-icons/fa";
+import MetaTags from 'react-meta-tags';
+
 // const SocialShare = [
 //     {Social: <FaFacebookF /> , link: 'https://www.facebook.com/'},
 //     {Social: <FaLinkedinIn /> , link: 'https://www.linkedin.com/'},
@@ -27,7 +29,22 @@ class PortfolioMeePoongDetails extends Component {
     render() {
         return (
             <React.Fragment>
-                <PageHelmet pageTitle='COMPANY PROFILE' />
+                <PageHelmet pageTitle='COMPANY PROFILE - MEE POONG GROUP รับเขียนโปรแกรม เว็บไซต์ แอพพลิเคชัน และกราฟิกดีไซน์' />
+                <MetaTags>
+                    <title>{`COMPANY PROFILE - MEE POONG GROUP รับเขียนโปรแกรม เว็บไซต์ แอพพลิเคชัน และกราฟิกดีไซน์`}</title>
+
+                    <meta property="og:title" content={`COMPANY PROFILE - MEE POONG GROUP รับเขียนโปรแกรม เว็บไซต์ แอพพลิเคชัน และกราฟิกดีไซน์`} />
+                    <meta property="og:description" content={`Coder | Designer | Thinker | Blogger | Marketer`} />
+                    <meta property="og:image" content={`https://firebasestorage.googleapis.com/v0/b/meepoong-af0cc.appspot.com/o/assets%2Fshow.png?alt=media&token=0fd2c8ae-119b-4d40-9acc-ab43864d27b5`} />
+
+                    <meta name="twitter:title" content={`COMPANY PROFILE - MEE POONG GROUP รับเขียนโปรแกรม เว็บไซต์ แอพพลิเคชัน และกราฟิกดีไซน์`} />
+                    <meta name="twitter:description" content={`Coder | Designer | Thinker | Blogger | Marketer`} />
+                    <meta name="twitter:image" content={`https://firebasestorage.googleapis.com/v0/b/meepoong-af0cc.appspot.com/o/assets%2Fshow.png?alt=media&token=0fd2c8ae-119b-4d40-9acc-ab43864d27b5`} />
+                    <meta name="twitter:card" content="summary_large_image" />
+                    <meta property="og:site_name" content={`COMPANY PROFILE - MEE POONG GROUP รับเขียนโปรแกรม เว็บไซต์ แอพพลิเคชัน และกราฟิกดีไซน์`} />
+                    <meta name="twitter:image:alt" content={`COMPANY PROFILE - MEE POONG GROUP รับเขียนโปรแกรม เว็บไซต์ แอพพลิเคชัน และกราฟิกดีไซน์`} />
+                </MetaTags>
+
 
                 <Header headertransparent="header--transparent" colorblack="color--black" logoname="logo.png" />
 

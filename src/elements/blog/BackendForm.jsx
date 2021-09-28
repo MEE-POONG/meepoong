@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useHistory } from 'react-router-dom';
 
+import MetaTags from 'react-meta-tags';
 import Swal from 'sweetalert2'
 
 import * as loadingData from "./loading.json";
@@ -134,85 +135,100 @@ const BackendForm = () => {
             </div>
           </FadeIn>
         ) : ((
-          <div className="contact-form--1 pt-5">
-            <div className="container">
-              <div className="row row--35">
-                <div className="col-lg-12 order-2 order-lg-1">
-                  <div className="section-title text-left mb--50">
-                    <span className="subtitle">Update News</span>
-                    <h2 className="title">เพิ่มเลยเพิ่มเลยย</h2>
-                  </div>
-                  <div className="form-wrapper">
-                    <form>
-                      <center>
-                        <div className="AppBody col-lg-6">
-                          <div className="App-images">
-                            <img
-                              className="App-image"
-                              src={showImage()}
-                              alt=""
-                            />
+          <>
+            <MetaTags>
+              <title>{`ADMIN - MEE POONG GROUP รับเขียนโปรแกรม เว็บไซต์ แอพพลิเคชัน และกราฟิกดีไซน์`}</title>
+
+              <meta property="og:title" content={`ADMIN - MEE POONG GROUP รับเขียนโปรแกรม เว็บไซต์ แอพพลิเคชัน และกราฟิกดีไซน์`} />
+              <meta property="og:description" content={`Coder | Designer | Thinker | Blogger | Marketer`} />
+              <meta property="og:image" content={`https://firebasestorage.googleapis.com/v0/b/meepoong-af0cc.appspot.com/o/assets%2Fshow.png?alt=media&token=0fd2c8ae-119b-4d40-9acc-ab43864d27b5`} />
+
+              <meta name="twitter:title" content={`ADMIN - MEE POONG GROUP รับเขียนโปรแกรม เว็บไซต์ แอพพลิเคชัน และกราฟิกดีไซน์`} />
+              <meta name="twitter:description" content={`Coder | Designer | Thinker | Blogger | Marketer`} />
+              <meta name="twitter:image" content={`https://firebasestorage.googleapis.com/v0/b/meepoong-af0cc.appspot.com/o/assets%2Fshow.png?alt=media&token=0fd2c8ae-119b-4d40-9acc-ab43864d27b5`} />
+              <meta name="twitter:card" content="summary_large_image" />
+              <meta property="og:site_name" content={`ADMIN - MEE POONG GROUP รับเขียนโปรแกรม เว็บไซต์ แอพพลิเคชัน และกราฟิกดีไซน์`} />
+              <meta name="twitter:image:alt" content={`ADMIN - MEE POONG GROUP รับเขียนโปรแกรม เว็บไซต์ แอพพลิเคชัน และกราฟิกดีไซน์`} />
+            </MetaTags>
+            <div className="contact-form--1 pt-5">
+              <div className="container">
+                <div className="row row--35">
+                  <div className="col-lg-12 order-2 order-lg-1">
+                    <div className="section-title text-left mb--50">
+                      <span className="subtitle">Update News</span>
+                      <h2 className="title">เพิ่มเลยเพิ่มเลยย</h2>
+                    </div>
+                    <div className="form-wrapper">
+                      <form>
+                        <center>
+                          <div className="AppBody col-lg-6">
+                            <div className="App-images">
+                              <img
+                                className="App-image"
+                                src={showImage()}
+                                alt=""
+                              />
+                            </div>
+                            <label htmlFor="file">
+                              <input id="file" type="file" class="file" data-preview-file-type="text" onChange={handleFileSubmit} />
+                            </label>
+
                           </div>
-                          <label htmlFor="file">
-                            <input id="file" type="file" class="file" data-preview-file-type="text" onChange={handleFileSubmit} />
-                          </label>
+                        </center>
+                        <label htmlFor="name">
+                          <input
+                            type="text"
+                            name="name"
+                            id="name"
+                            value={title}
+                            onChange={(e) => {
+                              setTitle(e.target.value)
+                            }}
+                            placeholder="หัวเรื่อง"
+                          />
+                        </label>
 
-                        </div>
-                      </center>
-                      <label htmlFor="name">
-                        <input
-                          type="text"
-                          name="name"
-                          id="name"
-                          value={title}
-                          onChange={(e) => {
-                            setTitle(e.target.value)
-                          }}
-                          placeholder="หัวเรื่อง"
-                        />
-                      </label>
+                        <label htmlFor="description">
+                          <textarea
+                            type="text"
+                            id="description"
+                            name="description"
+                            value={description}
+                            onChange={(e) => {
+                              setDescription(e.target.value);
+                            }}
+                            placeholder="รายละเอียด"
+                          />
+                        </label>
 
-                      <label htmlFor="description">
-                        <textarea
-                          type="text"
-                          id="description"
-                          name="description"
-                          value={description}
-                          onChange={(e) => {
-                            setDescription(e.target.value);
-                          }}
-                          placeholder="รายละเอียด"
-                        />
-                      </label>
-
-                      <label htmlFor="detail">
-                        <h3>เนื้อหา</h3>
-                        <Editor
-                          id="detail"
-                          name="detail"
-                          placeholder="เนื้อหา"
-                          cellPlugins={cellPlugins}
-                          value={detail}
-                          onChange={setDetail}
-                        />
-                      </label>
-                      <button
-                        className="btn-default"
-                        type="submit"
-                        value="submit"
-                        name="submit"
-                        id="mc-embedded-subscribe"
-                        onClick={handleAddNews}
-                      >
-                        Submit
-                      </button>
-                    </form>
+                        <label htmlFor="detail">
+                          <h3>เนื้อหา</h3>
+                          <Editor
+                            id="detail"
+                            name="detail"
+                            placeholder="เนื้อหา"
+                            cellPlugins={cellPlugins}
+                            value={detail}
+                            onChange={setDetail}
+                          />
+                        </label>
+                        <button
+                          className="btn-default"
+                          type="submit"
+                          value="submit"
+                          name="submit"
+                          id="mc-embedded-subscribe"
+                          onClick={handleAddNews}
+                        >
+                          Submit
+                        </button>
+                      </form>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        )
+          </>)
         )
       }
     </>

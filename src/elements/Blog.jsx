@@ -6,13 +6,29 @@ import BlogList from "../elements/blog/BlogList";
 import ScrollToTop from 'react-scroll-up';
 import { FiChevronUp } from "react-icons/fi";
 import Header from "../component/header/Header";
+import MetaTags from 'react-meta-tags';
+
 // import Footer from "../component/footer/Footer";
 
 class Blog extends Component{
     render(){
         return(
             <React.Fragment>
-                <PageHelmet pageTitle='Blog' />
+                <PageHelmet pageTitle='BLOG - MEE POONG GROUP รับเขียนโปรแกรม เว็บไซต์ แอพพลิเคชัน และกราฟิกดีไซน์' />
+                <MetaTags>
+                    <title>{`BLOG - MEE POONG GROUP รับเขียนโปรแกรม เว็บไซต์ แอพพลิเคชัน และกราฟิกดีไซน์`}</title>
+
+                    <meta property="og:title" content={`BLOG - MEE POONG GROUP รับเขียนโปรแกรม เว็บไซต์ แอพพลิเคชัน และกราฟิกดีไซน์`} />
+                    <meta property="og:description" content={`Coder | Designer | Thinker | Blogger | Marketer`} />
+                    <meta property="og:image" content={`https://firebasestorage.googleapis.com/v0/b/meepoong-af0cc.appspot.com/o/assets%2Fshow.png?alt=media&token=0fd2c8ae-119b-4d40-9acc-ab43864d27b5`} />
+
+                    <meta name="twitter:title" content={`BLOG - MEE POONG GROUP รับเขียนโปรแกรม เว็บไซต์ แอพพลิเคชัน และกราฟิกดีไซน์`} />
+                    <meta name="twitter:description" content={`Coder | Designer | Thinker | Blogger | Marketer`} />
+                    <meta name="twitter:image" content={`https://firebasestorage.googleapis.com/v0/b/meepoong-af0cc.appspot.com/o/assets%2Fshow.png?alt=media&token=0fd2c8ae-119b-4d40-9acc-ab43864d27b5`} />
+                    <meta name="twitter:card" content="summary_large_image" />
+                    <meta property="og:site_name" content={`BLOG - MEE POONG GROUP รับเขียนโปรแกรม เว็บไซต์ แอพพลิเคชัน และกราฟิกดีไซน์`} />
+                    <meta name="twitter:image:alt" content={`BLOG - MEE POONG GROUP รับเขียนโปรแกรม เว็บไซต์ แอพพลิเคชัน และกราฟิกดีไซน์`} />
+                </MetaTags>
 
                 <Header headertransparent="header--transparent" colorblack="color--black" logoname="logo.png" />
                 {/* Start Breadcrump Area */}
