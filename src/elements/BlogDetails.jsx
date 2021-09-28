@@ -1,5 +1,4 @@
 import React from "react";
-import PageHelmet from "../component/common/Helmet";
 import MetaTags from 'react-meta-tags';
 
 // import { FiClock, FiUser, FiMessageCircle, FiHeart } from "react-icons/fi";
@@ -70,7 +69,6 @@ const BlogDetails = () => {
 
   return (
     <React.Fragment>
-      <PageHelmet pageTitle={`MEE POONG BLOG DETAIL - ${title}`} />
       <MetaTags>
         <title>{`MEE POONG BLOG DETAIL - ${title}`}</title>
 
